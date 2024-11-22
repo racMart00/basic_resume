@@ -18,7 +18,6 @@ class LayoutTemplate extends StatelessWidget {
                 sizingInformation.deviceScreenType == DeviceScreenType.mobile
                     ? NavBarDrawer()
                     : null,
-            backgroundColor: Colors.white,
             body: CenteredView(
               child: Column(
                 children: [

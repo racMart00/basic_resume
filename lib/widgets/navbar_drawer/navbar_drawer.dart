@@ -2,7 +2,6 @@ import 'package:basic_resume/widgets/navbar_drawer/drawer_item.dart';
 import 'package:basic_resume/widgets/navbar_drawer/navbar_drawer_header.dart';
 import 'package:flutter/material.dart';
 
-//TODO: Puedo combinar este drawer item con el navbar item
 class NavBarDrawer extends StatelessWidget {
   const NavBarDrawer({super.key});
 
@@ -11,8 +10,7 @@ class NavBarDrawer extends StatelessWidget {
     return Container(
       width: 300,
       decoration: BoxDecoration(
-        color: Colors.white,
-        boxShadow: [BoxShadow(color: Colors.black12, blurRadius: 16)],
+        boxShadow: [BoxShadow(color: Colors.black87, blurRadius: 8)],
       ),
       child: Column(
         children: [
