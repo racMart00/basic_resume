@@ -1,3 +1,8 @@
+# Production
+build/*
+!build/web/
+!build/web/**
+
 # Miscellaneous
 *.class
 *.log
@@ -5,7 +10,6 @@
 *.swp
 .DS_Store
 .atom/
-.build/
 .buildlog/
 .history
 .svn/
@@ -31,7 +35,6 @@ migrate_working_dir/
 .flutter-plugins-dependencies
 .pub-cache/
 .pub/
-/build/
 
 # Symbolication related
 app.*.symbols
