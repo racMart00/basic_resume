@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:basic_resume/views/home/home_view.dart';
+import 'package:basic_resume/views/layout_template/layout_template.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: HomeView(),
+      home: LayoutTemplate(),
     );
   }
 }
