@@ -2,9 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:basic_resume/config/router/app_router.dart';
-import 'package:basic_resume/presentation/providers/theme_bloc/theme_bloc.dart';
+import 'package:basic_resume/presentation/cubits/theme_bloc/theme_bloc.dart';
+
+import 'package:basic_resume/presentation/cubits/screen_size_cubit/screen_size_observer.dart';
 
 void main() {
+  Bloc.observer = const ScreenSizeObserver();
   runApp(const MyApp());
 }
 

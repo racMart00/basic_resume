@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:basic_resume/presentation/presentation.dart';
-import 'package:basic_resume/presentation/providers/theme_bloc/theme_bloc.dart';
+import 'package:basic_resume/presentation/cubits/theme_bloc/theme_bloc.dart';
 
 class CustomNavBarTabletDesktop extends StatelessWidget {
   const CustomNavBarTabletDesktop({super.key});
