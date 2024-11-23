@@ -8,21 +8,16 @@ class NavBarDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 300,
+      width: 250,
       decoration: BoxDecoration(
-        boxShadow: [BoxShadow(color: Colors.black87, blurRadius: 8)],
+        boxShadow: [BoxShadow(color: Theme.of(context).colorScheme.surface)],
       ),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
           NavBarDrawerHeader(),
-          DrawerItem(
-            title: 'Episodes',
-            icon: Icons.videocam,
-          ),
-          DrawerItem(
-            title: 'About',
-            icon: Icons.help,
-          ),
+          DrawerItem(title: 'Home', icon: Icons.home_filled, path: '/0',),
+          DrawerItem(title: 'About', icon: Icons.account_circle_rounded, path: '/1'),
         ],
       ),
     );

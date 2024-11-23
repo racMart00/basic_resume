@@ -30,7 +30,7 @@ class CourseDetails extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                'FLUTTER WEB',
+                'Hi, My name is ____',
                 style: TextStyle(
                   fontWeight: FontWeight.w800,
                   height: 0.9,

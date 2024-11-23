@@ -7,7 +7,7 @@ class NavBarLogo extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: 80,
-      child: Row(children: [Icon(Icons.abc_rounded), Text('Logo \n title')]),
+      child: Row(children: [Icon(Icons.abc_rounded), Text('racMart')]),
     );
   }
 }

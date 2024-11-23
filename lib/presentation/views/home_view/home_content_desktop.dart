@@ -10,7 +10,11 @@ class HomeContentDesktop extends StatelessWidget {
     return Row(
       children: [
         CourseDetails(),
-        Expanded(child: Center(child: CallToAction(title: 'Join Course'))),
+        Expanded(
+          child: Center(
+            child: TextButton(onPressed: () {}, child: Text('Hire Me')),
+          ),
+        ),
       ],
     );
   }

@@ -4,7 +4,11 @@ import 'package:responsive_builder/responsive_builder.dart';
 import 'package:basic_resume/presentation/presentation.dart';
 
 class LayoutTemplate extends StatelessWidget {
-  const LayoutTemplate({super.key});
+  final int pageIndex;
+
+  const LayoutTemplate({super.key, required this.pageIndex});
+
+  final viewRoutes = const <Widget>[HomeView(), AboutView()];
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +24,7 @@ class LayoutTemplate extends StatelessWidget {
                 children: [
                   CustomNavBar(),
                   Expanded(
-                    child: HomeView()
+                    child: IndexedStack(index: pageIndex, children: viewRoutes),
                   ),
                 ],
               ),

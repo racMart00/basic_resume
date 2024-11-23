@@ -1,33 +1,56 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+import 'package:basic_resume/presentation/providers/theme_bloc/theme_bloc.dart';
 
 class NavBarDrawerHeader extends StatelessWidget {
   const NavBarDrawerHeader({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 150,
-      color: Colors.green.shade400,
-      alignment: Alignment.center,
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Text(
-            'SKILL UP NOW',
-            style: TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.w800,
-              color: Colors.white,
-            ),
+    return Stack(
+      children: [
+        Container(
+          height: 150,
+          color: Colors.green.shade600,
+          alignment: Alignment.center,
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text(
+                'SKILL UP NOW',
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w800,
+                  color: Theme.of(context).colorScheme.inverseSurface,
+                ),
+              ),
+              Text(
+                'TAP HERE',
+                style: TextStyle(
+                  fontSize: 12,
+                  fontWeight: FontWeight.w600,
+                  color: Theme.of(context).colorScheme.inverseSurface,
+                ),
+              ),
+            ],
           ),
-          Text(
-            'TAP HERE',
-            style: TextStyle(
-              color: Colors.white,
+        ),
+        Positioned(
+          top: 8, // Ajusta la posición vertical
+          right: 8, // Ajusta la posición horizontal
+          child: IconButton(
+            icon: Icon(
+              context.read<ThemeBloc>().state.themeMode == ThemeMode.dark
+                  ? Icons.light_mode
+                  : Icons.dark_mode,
             ),
+            onPressed: () {
+              context.read<ThemeBloc>().add(ToggleThemeEvent()); // Alterna el tema
+            },
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }
