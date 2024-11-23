@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:basic_resume/widgets/navigation_bar/navbar_logo.dart';
-import 'package:basic_resume/widgets/navigation_bar/navbar_item.dart';
+import 'package:basic_resume/presentation/presentation.dart';
 
 class CustomNavBarTabletDesktop extends StatelessWidget {
   const CustomNavBarTabletDesktop({super.key});

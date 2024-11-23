@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:basic_resume/views/layout_template/layout_template.dart';
+import 'package:basic_resume/presentation/views/layout_template/layout_template.dart';
 
 void main() {
   runApp(const MyApp());

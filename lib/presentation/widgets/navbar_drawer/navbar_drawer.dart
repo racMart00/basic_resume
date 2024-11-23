@@ -1,6 +1,6 @@
-import 'package:basic_resume/widgets/navbar_drawer/drawer_item.dart';
-import 'package:basic_resume/widgets/navbar_drawer/navbar_drawer_header.dart';
 import 'package:flutter/material.dart';
+
+import 'package:basic_resume/presentation/presentation.dart';
 
 class NavBarDrawer extends StatelessWidget {
   const NavBarDrawer({super.key});

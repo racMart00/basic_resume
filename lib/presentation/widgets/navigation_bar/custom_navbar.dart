@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
-import 'package:basic_resume/widgets/navigation_bar/custom_navbar_mobile.dart';
-import 'package:basic_resume/widgets/navigation_bar/custom_navbar_tablet_desktop.dart';
+import 'package:basic_resume/presentation/presentation.dart';
 
 class CustomNavBar extends StatelessWidget {
   const CustomNavBar({super.key});

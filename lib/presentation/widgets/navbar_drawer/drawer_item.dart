@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:basic_resume/widgets/navigation_bar/navbar_item.dart';
+import 'package:basic_resume/presentation/presentation.dart';
 
 //TODO: Puedo combinar este drawer item con el navbar item
 class DrawerItem extends StatelessWidget {

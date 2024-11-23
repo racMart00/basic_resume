@@ -1,4 +1,3 @@
-import 'package:basic_resume/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class NavBarDrawerHeader extends StatelessWidget {
@@ -8,7 +7,7 @@ class NavBarDrawerHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 150,
-      color: primaryColor,
+      color: Colors.green.shade400,
       alignment: Alignment.center,
       child: Column(
         mainAxisSize: MainAxisSize.min,

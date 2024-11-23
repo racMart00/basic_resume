@@ -1,17 +1,17 @@
-import 'package:basic_resume/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 
-class CallToActionTabletDesktop extends StatelessWidget {
+class CallToActionMobile extends StatelessWidget {
   final String title;
 
-  const CallToActionTabletDesktop({super.key, required this.title});
+  const CallToActionMobile({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 60, vertical: 15),
+      height: 60,
+      alignment: Alignment.center,
       decoration: BoxDecoration(
-        color: primaryColor,
+        color: Colors.green.shade400,
         borderRadius: BorderRadius.circular(5),
       ),
       child: Text(

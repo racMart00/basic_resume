@@ -1,6 +1,6 @@
-import 'package:basic_resume/widgets/call_to_action/call_to_action.dart';
-import 'package:basic_resume/widgets/course_details/course_details.dart';
 import 'package:flutter/material.dart';
+
+import 'package:basic_resume/presentation/presentation.dart';
 
 class HomeContentMobile extends StatelessWidget {
   const HomeContentMobile({super.key});
