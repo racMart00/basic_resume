@@ -30,7 +30,7 @@ class NavBarItem extends StatelessWidget {
             color: Theme.of(context).colorScheme.inverseSurface,
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 4, left: 4),
+            padding: const EdgeInsets.only(top: 3, left: 4),
             child: Text(
               title,
               style: TextStyle(

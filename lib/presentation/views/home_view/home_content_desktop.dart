@@ -7,14 +7,22 @@ class HomeContentDesktop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Size size = MediaQuery.of(context).size;
+
     return Row(
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        CourseDetails(),
-        Expanded(
-          child: Center(
-            child: TextButton(onPressed: () {}, child: Text('Hire Me')),
-          ),
+        Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            CourseDetails(),
+            SizedBox(height: size.height * 0.05),
+            CallToAction(),
+          ],
         ),
+        MyAvatar()
       ],
     );
   }

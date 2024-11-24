@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:basic_resume/presentation/presentation.dart';
-import 'package:basic_resume/presentation/cubits/theme_bloc/theme_bloc.dart';
 
 class CustomNavBarTabletDesktop extends StatelessWidget {
   const CustomNavBarTabletDesktop({super.key});
@@ -13,6 +12,7 @@ class CustomNavBarTabletDesktop extends StatelessWidget {
       height: 100,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           NavBarLogo(),
 
@@ -21,12 +21,12 @@ class CustomNavBarTabletDesktop extends StatelessWidget {
             children: [
               IconButton(
                 icon: Icon(
-                  context.read<ThemeBloc>().state.themeMode == ThemeMode.dark
+                  context.read<ThemeCubit>().state.themeMode == ThemeMode.dark
                       ? Icons.light_mode
                       : Icons.dark_mode,
                 ),
                 onPressed: () {
-                  context.read<ThemeBloc>().add(ToggleThemeEvent()); // Alterna el tema
+                  context.read<ThemeCubit>().toggleTheme(); // Alterna el tema
                 },
               ),
               SizedBox(width: 20),

@@ -6,41 +6,41 @@ class CourseDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Size size = MediaQuery.of(context).size;
+
     return ResponsiveBuilder(
       builder: (context, sizingInformation) {
-        CrossAxisAlignment columnAlignment =
-            sizingInformation.deviceScreenType == DeviceScreenType.desktop
-                ? CrossAxisAlignment.start
-                : CrossAxisAlignment.center;
-
-        double titleSize =
-            sizingInformation.deviceScreenType == DeviceScreenType.mobile
-                ? 50
-                : 60;
-
-        double descriptionSize =
-            sizingInformation.deviceScreenType == DeviceScreenType.mobile
-                ? 16
-                : 21;
+        // CrossAxisAlignment columnAlignment =
+        //     sizingInformation.deviceScreenType == DeviceScreenType.desktop
+        //         ? CrossAxisAlignment.start
+        //         : CrossAxisAlignment.center;
 
         return SizedBox(
-          width: 600,
+          width: size.height * 1.25,
           child: Column(
-            crossAxisAlignment: columnAlignment,
+            crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
-                'Hi, My name is ____',
-                style: TextStyle(
-                  fontWeight: FontWeight.w800,
-                  height: 0.9,
-                  fontSize: titleSize,
-                ),
-              ),
-              SizedBox(height: 30),
-              Text(
-                'La descripción es un discurso (oral o escrito) que detalla y explica las características de un lugar, persona, animal, cosa o situación. Por ejemplo: Era un lugar enorme, muy luminoso y con una vista privilegiada.',
-                style: TextStyle(fontSize: descriptionSize, height: 1.7),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  
+                  Text(
+                    'Front-End Developer',
+                    style: Theme.of(context).textTheme.displayMedium,
+                  ),
+                  SizedBox(height: size.height * 0.01),
+                  Text(
+                    'Rafa Martinez',
+                    style: Theme.of(context).textTheme.displayLarge,
+                  ),
+                  SizedBox(height: size.height * 0.01),
+                  Text(
+                    'La descripción es un discurso (oral o escrito) que detalla y explica las características de un lugar, persona, animal, cosa o situación. Por ejemplo: Era un lugar enorme, muy luminoso y con una vista privilegiada.',
+                    style: Theme.of(context).textTheme.displayMedium,
+                  ),
+                ],
               ),
             ],
           ),

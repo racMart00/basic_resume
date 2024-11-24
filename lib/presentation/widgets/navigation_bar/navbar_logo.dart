@@ -5,9 +5,17 @@ class NavBarLogo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Size size = MediaQuery.of(context).size;
+
     return SizedBox(
-      height: 80,
-      child: Row(children: [Icon(Icons.abc_rounded), Text('racMart')]),
+      height: size.width * 0.08,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Text('racMart', style: Theme.of(context).textTheme.displayMedium),
+        ],
+      ),
     );
   }
 }

@@ -16,7 +16,7 @@ final appRouter = GoRouter(
       builder: (context, state) {
         final pageIndex = int.parse( state.pathParameters['page'] ?? '0' );
 
-        return LayoutTemplate( pageIndex: pageIndex );
+        return LayoutTemplate( pageIndex: pageIndex, );
       },
       routes: [
 

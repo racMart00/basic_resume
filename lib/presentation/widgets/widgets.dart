@@ -1,5 +1,7 @@
+export 'package:basic_resume/presentation/widgets/call_to_action/call_to_action.dart';
 export 'package:basic_resume/presentation/widgets/centered_view/centered_view.dart';
 export 'package:basic_resume/presentation/widgets/course_details/course_details.dart';
+export 'package:basic_resume/presentation/widgets/my_avatar/my_avatar.dart';
 export 'package:basic_resume/presentation/widgets/navbar_drawer/drawer_item.dart';
 export 'package:basic_resume/presentation/widgets/navbar_drawer/navbar_drawer_header.dart';
 export 'package:basic_resume/presentation/widgets/navbar_drawer/navbar_drawer.dart';

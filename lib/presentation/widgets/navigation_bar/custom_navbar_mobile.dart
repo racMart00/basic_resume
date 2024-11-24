@@ -7,20 +7,22 @@ class CustomNavBarMobile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Size size = MediaQuery.of(context).size;
+
     return SizedBox(
-      height: 80,
+      height: size.width * 0.08,
       child: Row(
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
+          NavBarLogo(),
+
           IconButton(
             onPressed: () {
               Scaffold.of(context).openDrawer();
             },
             icon: Icon(Icons.menu),
           ),
-
-          NavBarLogo(),
         ],
       ),
     );

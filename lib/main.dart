@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'package:basic_resume/config/router/app_router.dart';
-import 'package:basic_resume/presentation/cubits/theme_bloc/theme_bloc.dart';
-
-import 'package:basic_resume/presentation/cubits/screen_size_cubit/screen_size_observer.dart';
+import 'package:basic_resume/presentation/presentation.dart';
+import 'package:basic_resume/config/config.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 
 void main() {
-  Bloc.observer = const ScreenSizeObserver();
   runApp(const MyApp());
 }
 
@@ -16,14 +14,22 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Size size = MediaQuery.of(context).size;
+
     return BlocProvider(
-      create: (context) => ThemeBloc(),
-      child: BlocBuilder<ThemeBloc, ThemeState>(
+      create: (context) => ThemeCubit(),
+      child: BlocBuilder<ThemeCubit, ThemeState>(
         builder: (context, state) {
-          return MaterialApp.router(
-            title: 'racMart',
-            theme: getThemeData(state.themeMode),
-            routerConfig: appRouter,
+          return ResponsiveBuilder(
+            builder: (context, sizingInformation) {
+              return MaterialApp.router(
+                title: 'racMart',
+                theme: AppTheme.lightTheme(size, sizingInformation),
+                darkTheme: AppTheme.darkTheme(size, sizingInformation),
+                themeMode: state.themeMode,
+                routerConfig: appRouter,
+              );
+            }
           );
         },
       ),
