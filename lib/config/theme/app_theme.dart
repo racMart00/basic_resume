@@ -28,13 +28,17 @@ class AppTheme {
       }
     }
 
-    double displayLargeSize = calculateDisplaySize(0.06);
-    double displayMediumSize = calculateDisplaySize(0.026);
-    double displaySmallSize = calculateDisplaySize(0.02);
+    double displayLargeSize = calculateDisplaySize(0.022);
+    double displayMediumSize = calculateDisplaySize(0.020);
+    double displaySmallSize = calculateDisplaySize(0.018);
 
-    double titleLargeSize = calculateDisplaySize(0.018);
+    double titleLargeSize = calculateDisplaySize(0.016);
     double titleMediumSize = calculateDisplaySize(0.014);
     double titleSmallSize = calculateDisplaySize(0.012);
+
+    double bodyLargeSize = calculateDisplaySize(0.010);
+    double bodyMediumSize = calculateDisplaySize(0.008);
+    double bodySmallSize = calculateDisplaySize(0.006);
 
     Color color =
         brightness == Brightness.light
@@ -71,6 +75,21 @@ class AppTheme {
         ),
         titleSmall: TextStyle(
           fontSize: titleSmallSize,
+          fontWeight: FontWeight.w400,
+          color: color,
+        ),
+        bodyLarge: TextStyle(
+          fontSize: bodyLargeSize,
+          fontWeight: FontWeight.bold,
+          color: color,
+        ),
+        bodyMedium: TextStyle(
+          fontSize: bodyMediumSize,
+          fontWeight: FontWeight.w500,
+          color: color,
+        ),
+        bodySmall: TextStyle(
+          fontSize: bodySmallSize,
           fontWeight: FontWeight.w400,
           color: color,
         ),

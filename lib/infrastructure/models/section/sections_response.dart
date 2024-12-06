@@ -1,10 +1,12 @@
+import 'package:basic_resume/infrastructure/infrastructure.dart';
+
 class SectionsResponse {
   final String title;
   final String? subtitle;
   final String? where;
   final String? date;
   final dynamic description;
-  final List<String>? tags;
+  final Map<String, TagResponse>? tags;
 
   SectionsResponse({
     required this.title,
@@ -21,14 +23,11 @@ class SectionsResponse {
       subtitle: json['subtitle'],
       where: json['where'],
       date: json['date'],
-      description:
-          json['description'] is List
-              ? List<String>.from(json['description'].map((x) => x.toString()))
-              : json['description'],
-      tags:
-          json['tags'] != null
-              ? List<String>.from(json['tags'].map((x) => x.toString()))
-              : null,
+      description: json['description'] is List
+          ? List<String>.from(json['description'].map((x) => x.toString()))
+          : json['description'],
+      tags: (json['tags'] as Map<String, dynamic>?)?.map((key, value) =>
+          MapEntry(key, TagResponse.fromJson(value))), // Use TagResponse
     );
   }
 
@@ -38,11 +37,10 @@ class SectionsResponse {
       'subtitle': subtitle,
       'where': where,
       'date': date,
-      'description':
-          description is List<String>
-              ? List<dynamic>.from(description.map((x) => x))
-              : description,
-      'tags': tags != null ? List<dynamic>.from(tags!.map((x) => x)) : null,
+      'description': description is List<String>
+          ? List<dynamic>.from(description.map((x) => x))
+          : description,
+      'tags': tags?.map((key, value) => MapEntry(key, value.toJson())),
     };
   }
 }

@@ -12,7 +12,7 @@ class SectionInitial extends SectionState {}
 class SectionLoading extends SectionState {}
 
 class SectionLoaded extends SectionState {
-  final List<Section> sections;
+  final List<SectionEntity> sections;
 
   SectionLoaded(this.sections);
 

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+
+import 'package:basic_resume/domain/domain.dart';
 import 'package:basic_resume/presentation/presentation.dart';
 
 class Section extends StatelessWidget {
@@ -7,7 +9,7 @@ class Section extends StatelessWidget {
   final String? where;
   final String? date;
   final dynamic description;
-  final String? tags;
+  final Map<String, TagEntity>? tags;
 
   const Section({
     super.key,
@@ -28,17 +30,17 @@ class Section extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(title, style: Theme.of(context).textTheme.titleLarge),
-        SizedBox(height: size.height * 0.005),
+        Divider(),
         if (subtitle != null) ...[
           Text(subtitle!, style: Theme.of(context).textTheme.titleMedium),
           SizedBox(height: size.height * 0.005),
         ],
         if (where != null) ...[
-          Text(where!, style: Theme.of(context).textTheme.titleMedium),
+          Text(where!, style: Theme.of(context).textTheme.bodyMedium),
           SizedBox(height: size.height * 0.005),
         ],
         if (date != null) ...[
-          Text(date!, style: Theme.of(context).textTheme.titleMedium),
+          Text(date!, style: Theme.of(context).textTheme.bodyMedium),
           SizedBox(height: size.height * 0.005),
         ],
         if (description is String) ...[
@@ -51,45 +53,35 @@ class Section extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children:
                 (description as List<String>).map((desc) {
-                  return Text(
-                    desc,
-                    style: Theme.of(context).textTheme.titleSmall,
+                  return Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        " - $desc",
+                        style: Theme.of(context).textTheme.bodyMedium,
+                      ),
+                      SizedBox(height: size.height * 0.001,)
+                    ],
                   );
                 }).toList(),
           ),
         ],
         SizedBox(height: size.height * 0.005),
         if (tags != null) ...[
-          Text(tags!, style: Theme.of(context).textTheme.titleMedium),
-          SizedBox(height: size.height * 0.005),
+          Wrap(
+            spacing: 8.0,
+            runSpacing: 4.0,
+            children:
+                tags!.entries.map((entry) {
+                  return TagIcon(
+                    tagTitle: entry.key,
+                    tagColor: entry.value.color,
+                    svgDir: entry.value.icon,
+                    svgTitle: entry.key,
+                  );
+                }).toList(),
+          ),
         ],
-
-        Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            TagIcon(
-              tagTitle: 'Flutter',
-              tagColor: Colors.blue.shade800,
-              svgDir: 'assets/images/dev_icons/flutter.svg',
-              svgTitle: 'Flutter',
-            ),
-            SizedBox(width: size.width * 0.005),
-            TagIcon(
-              tagTitle: 'Java',
-              tagColor: Colors.blue.shade700,
-              svgDir: 'assets/images/dev_icons/java1.svg',
-              svgTitle: 'Java',
-            ),
-            SizedBox(width: size.width * 0.005),
-            TagIcon(
-              tagTitle: 'JS',
-              tagColor: Colors.blue.shade600,
-              svgDir: 'assets/images/dev_icons/js.svg',
-              svgTitle: 'Java Script',
-            ),
-          ],
-        ),
       ],
     );
   }

@@ -7,7 +7,7 @@ class SectionRepositoryImpl extends SectionsRepositories {
   SectionRepositoryImpl(this.datasources);
 
   @override
-  Future<List<Section>> getSections() {
+  Future<List<SectionEntity>> getSections() {
     return datasources.getSections();
   }
 }

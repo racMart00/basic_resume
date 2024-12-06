@@ -21,7 +21,7 @@ class TagIcon extends StatelessWidget {
     final Size size = MediaQuery.of(context).size;
 
     return Container(
-      width: size.width * 0.06,
+      width: size.width * 0.07,
       height: 30,
       decoration: BoxDecoration(
         color: tagColor,

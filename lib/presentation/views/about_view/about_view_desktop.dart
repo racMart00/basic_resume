@@ -65,6 +65,7 @@ class _AboutViewDesktopState extends State<AboutViewDesktop> {
                             where: state.sections[1].where,
                             date: state.sections[1].date,
                             description: state.sections[1].description,
+                            tags: state.sections[1].tags,
                           )
                           : state is SectionError
                           ? Text((state).message)
@@ -85,6 +86,7 @@ class _AboutViewDesktopState extends State<AboutViewDesktop> {
                               where: state.sections[2].where,
                               date: state.sections[2].date,
                               description: state.sections[2].description,
+                              tags: state.sections[2].tags,
                             )
                             : state is SectionError
                             ? Text((state).message)

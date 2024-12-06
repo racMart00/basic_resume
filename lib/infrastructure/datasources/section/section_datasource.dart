@@ -5,11 +5,11 @@ import 'package:basic_resume/infrastructure/infrastructure.dart';
 
 class SectionDatasource extends SectionsDatasources {
   @override
-  Future<List<Section>> getSections() async {
+  Future<List<SectionEntity>> getSections() async {
     final String response = await rootBundle.loadString('assets/db/sections.json');
     final Map<String, dynamic> data = json.decode(response);
 
-    List<Section> sections = [];
+    List<SectionEntity> sections = [];
 
     data.forEach((key, value) {
       sections.add(

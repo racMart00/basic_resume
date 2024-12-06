@@ -13,17 +13,40 @@
             "Awarded UCI",
             "Completed professional development in UCI"
         ],
-        "tags": [
-            "Java",
-            "Django",
-            "Python",
-            "HTML",
-            "CSS",
-            "Bootstrap",
-            "JS",
-            "SQL",
-            "Postgres SQL"
-        ]
+        "tags": {
+            "Java": {
+                "icon": "assets/icons/dev_icons/java.svg",
+                "color": "255,0,0,0"
+            },
+            "Django": {
+                "icon": "assets/icons/dev_icons/django.svg",
+                "color": "255,0,0,0"
+            },
+            "Python": {
+                "icon": "assets/icons/dev_icons/python.svg",
+                "color": "255,0,0,0"
+            },
+            "HTML": {
+                "icon": "assets/icons/dev_icons/html.svg",
+                "color": "255,0,0,0"
+            },
+            "CSS": {
+                "icon": "assets/icons/dev_icons/css.svg",
+                "color": "255,0,0,0"
+            },
+            "Bootstrap": {
+                "icon": "assets/icons/dev_icons/bootstrap.svg",
+                "color": "255,0,0,0"
+            },
+            "JS": {
+                "icon": "assets/icons/dev_icons/js.svg",
+                "color": "255,0,0,0"
+            },
+            "Postgres SQL": {
+                "icon": "assets/icons/dev_icons/postgresql.svg",
+                "color": "255,0,0,0"
+            }
+        }
     },
     "work_history": {
         "title": "Work History",
@@ -35,13 +58,19 @@
             "Streamlined internal processes for improved efficiency in prospect research, donor management, and event planning.",
             "Defined and integrated roles, responsibilities, and processes for business team and data management organization."
         ],
-        "tags": [
-            "React",
-            "Redux",
-            "Tailwind CSS",
-            "Flutter",
-            "Riverpod",
-            "BLoC"
-        ]
+        "tags": {
+            "React": {
+                "icon": "assets/icons/dev_icons/react.svg",
+                "color": "255,0,0,0"
+            },
+            "Tailwind CSS": {
+                "icon": "assets/icons/dev_icons/tailwind.svg",
+                "color": "255,0,0,0"
+            },
+            "Flutter": {
+                "icon": "assets/icons/dev_icons/flutter.svg",
+                "color": "255,0,0,0"
+            }
+        }
     }
 }
