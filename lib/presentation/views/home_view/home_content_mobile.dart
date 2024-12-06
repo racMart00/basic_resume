@@ -11,11 +11,13 @@ class HomeContentMobile extends StatelessWidget {
 
     return Column(
       mainAxisSize: MainAxisSize.max,
-      mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         MyAvatar(),
+        SizedBox(height: size.height * 0.01),
         CourseDetails(),
-        SizedBox(height: size.height * 0.03),
+        SizedBox(height: size.height * 0.025),
         CallToAction(),
       ],
     );

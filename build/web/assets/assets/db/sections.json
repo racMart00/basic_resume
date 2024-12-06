@@ -1,0 +1,47 @@
+{
+    "professional_summary": {
+        "title": "Professional Summary",
+        "description": "Detail-oriented, organized, and meticulous employee who works at a fast pace to meet tight deadlines; enthusiastic team player ready to contribute to company success; highly skilled software development professional with talents in software design, development, and integration; offers advanced knowledge of in-demand programming languages; pursuing a full-time role that presents professional challenges while leveraging interpersonal skills, effective time management, and problem-solving expertise; hardworking and passionate job seeker with strong organizational skills; proactive and goal-oriented with excellent time management and problem-solving abilities; known for reliability and adaptability with a swift capacity to learn and apply new skills; committed to leveraging these qualities to drive team success and contribute to organizational growth; demonstrates strong analytical, communication, and teamwork skills with a proven ability to quickly adapt to new environments; eager to contribute to team success and further develop professional skills; brings a positive attitude and commitment to continuous learning and growth."
+    },
+    "education": {
+        "title": "Education",
+        "subtitle": "UCI - Computer Science Engineer",
+        "where": "Havana, Cuba",
+        "date": "08/2017 - 12/2023",
+        "description": [
+            "Member of UCI",
+            "Awarded UCI",
+            "Completed professional development in UCI"
+        ],
+        "tags": [
+            "Java",
+            "Django",
+            "Python",
+            "HTML",
+            "CSS",
+            "Bootstrap",
+            "JS",
+            "SQL",
+            "Postgres SQL"
+        ]
+    },
+    "work_history": {
+        "title": "Work History",
+        "subtitle": "XETID - Development Officer",
+        "where": "Havana, Cuba",
+        "date": "01/2024 - Current",
+        "description": [
+            "Completed and submitted monthly and yearly reports to support executive decision making.",
+            "Streamlined internal processes for improved efficiency in prospect research, donor management, and event planning.",
+            "Defined and integrated roles, responsibilities, and processes for business team and data management organization."
+        ],
+        "tags": [
+            "React",
+            "Redux",
+            "Tailwind CSS",
+            "Flutter",
+            "Riverpod",
+            "BLoC"
+        ]
+    }
+}

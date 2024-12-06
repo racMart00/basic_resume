@@ -22,6 +22,7 @@ class HomeContentDesktop extends StatelessWidget {
             CallToAction(),
           ],
         ),
+        SizedBox(width: size.height * 0.025),
         MyAvatar()
       ],
     );
