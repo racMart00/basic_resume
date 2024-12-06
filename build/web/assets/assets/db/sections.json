@@ -16,35 +16,35 @@
         "tags": {
             "Java": {
                 "icon": "assets/icons/dev_icons/java.svg",
-                "color": "#Colors.blue.shade400"
+                "color": "255,0,0,0"
             },
             "Django": {
                 "icon": "assets/icons/dev_icons/django.svg",
-                "color": "#Colors.blue.shade400"
+                "color": "255,0,0,0"
             },
             "Python": {
                 "icon": "assets/icons/dev_icons/python.svg",
-                "color": "#Colors.blue.shade400"
+                "color": "255,0,0,0"
             },
             "HTML": {
                 "icon": "assets/icons/dev_icons/html.svg",
-                "color": "#Colors.blue.shade400"
+                "color": "255,0,0,0"
             },
             "CSS": {
                 "icon": "assets/icons/dev_icons/css.svg",
-                "color": "#Colors.blue.shade400"
+                "color": "255,0,0,0"
             },
             "Bootstrap": {
                 "icon": "assets/icons/dev_icons/bootstrap.svg",
-                "color": "#Colors.blue.shade400"
+                "color": "255,0,0,0"
             },
             "JS": {
                 "icon": "assets/icons/dev_icons/js.svg",
-                "color": "#Colors.blue.shade400"
+                "color": "255,0,0,0"
             },
             "Postgres SQL": {
                 "icon": "assets/icons/dev_icons/postgresql.svg",
-                "color": "#Colors.blue.shade400"
+                "color": "255,0,0,0"
             }
         }
     },
@@ -61,15 +61,15 @@
         "tags": {
             "React": {
                 "icon": "assets/icons/dev_icons/react.svg",
-                "color": "#Colors.blue.shade400"
+                "color": "255,0,0,0"
             },
             "Tailwind CSS": {
                 "icon": "assets/icons/dev_icons/tailwind.svg",
-                "color": "#Colors.blue.shade400"
+                "color": "255,0,0,0"
             },
             "Flutter": {
                 "icon": "assets/icons/dev_icons/flutter.svg",
-                "color": "#Colors.blue.shade400"
+                "color": "255,0,0,0"
             }
         }
     }
