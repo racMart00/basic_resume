@@ -11,7 +11,7 @@ class AboutView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => SectionCubit(SectionDatasource()), // Proveer el cubit aquí
+      create: (context) => SectionCubit(SectionDatasource()),
       child: ScreenTypeLayout.builder(
         mobile: (BuildContext context) => AboutViewMobile(),
         tablet: (BuildContext context) => AboutViewTablet(),

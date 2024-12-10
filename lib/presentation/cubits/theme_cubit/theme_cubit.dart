@@ -15,6 +15,6 @@ class ThemeCubit extends Cubit<ThemeState> {
   // Método para alternar el tema
   void toggleTheme() {
     final newMode = state.themeMode == ThemeMode.dark ? ThemeMode.light : ThemeMode.dark;
-    emit(ThemeState(newMode)); // Emitimos el nuevo estado
+    emit(ThemeState(newMode));
   }
 }

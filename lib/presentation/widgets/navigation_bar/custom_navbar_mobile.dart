@@ -10,7 +10,7 @@ class CustomNavBarMobile extends StatelessWidget {
     final Size size = MediaQuery.of(context).size;
 
     return SizedBox(
-      height: size.width * 0.08,
+      height: size.width * 0.12,
       child: Row(
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,

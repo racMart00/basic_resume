@@ -21,18 +21,21 @@ class TagIcon extends StatelessWidget {
     final Size size = MediaQuery.of(context).size;
 
     return Container(
-      width: size.width * 0.07,
-      height: 30,
+      padding: EdgeInsets.symmetric(
+        horizontal: size.width * 0.01,
+        vertical: size.height * 0.005,
+      ),
       decoration: BoxDecoration(
         color: tagColor,
         borderRadius: BorderRadius.circular(8),
       ),
       child: Row(
+        mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(tagTitle, style: TextStyle(color: Colors.white)),
-
+          Text(tagTitle, style: Theme.of(context).textTheme.bodyMedium),
+          SizedBox(width: size.width * 0.006,),
           DevIcon(svgDir: svgDir, svgTitle: svgTitle),
         ],
       ),

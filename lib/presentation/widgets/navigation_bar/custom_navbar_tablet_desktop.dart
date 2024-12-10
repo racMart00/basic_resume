@@ -8,8 +8,10 @@ class CustomNavBarTabletDesktop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Size size = MediaQuery.of(context).size;
+
     return SizedBox(
-      height: 100,
+      height: size.height * 0.14,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -19,20 +21,26 @@ class CustomNavBarTabletDesktop extends StatelessWidget {
           Row(
             mainAxisSize: MainAxisSize.min,
             children: [
-              IconButton(
-                icon: Icon(
-                  context.read<ThemeCubit>().state.themeMode == ThemeMode.dark
-                      ? Icons.light_mode
-                      : Icons.dark_mode,
-                ),
-                onPressed: () {
-                  context.read<ThemeCubit>().toggleTheme(); // Alterna el tema
+              BlocBuilder<ThemeCubit, ThemeState>(
+                builder: (context, state) {
+                  return IconButton(
+                    icon: Icon(
+                      state.themeMode == ThemeMode.dark
+                          ? Icons.light_mode
+                          : Icons.dark_mode,
+                    ),
+                    onPressed: () {
+                      context.read<ThemeCubit>().toggleTheme();
+                    },
+                  );
                 },
               ),
-              SizedBox(width: 20),
-              NavBarItem(title: "Home", icon: Icons.home_filled, path: '/',),
-              SizedBox(width: 20),
-              NavBarItem(title: "About", icon: Icons.account_circle, path: '/1',),
+              NavBarItem(title: "Home", icon: Icons.home_filled, path: '/'),
+              NavBarItem(
+                title: "About",
+                icon: Icons.account_circle,
+                path: '/1',
+              ),
             ],
           ),
         ],

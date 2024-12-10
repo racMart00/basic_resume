@@ -18,8 +18,8 @@ class AppTheme {
     double calculateDisplaySize(double baseSize) {
       switch (sizingInformation.deviceScreenType) {
         case DeviceScreenType.desktop:
-          return size.height *
-              (baseSize + 0.01);
+          return size.width *
+              (baseSize + 0.004);
         case DeviceScreenType.tablet:
           return size.height * baseSize;
         case DeviceScreenType.mobile:
@@ -28,17 +28,17 @@ class AppTheme {
       }
     }
 
-    double displayLargeSize = calculateDisplaySize(0.022);
-    double displayMediumSize = calculateDisplaySize(0.020);
-    double displaySmallSize = calculateDisplaySize(0.018);
+    double displayLargeSize = calculateDisplaySize(0.020);
+    double displayMediumSize = calculateDisplaySize(0.018);
+    double displaySmallSize = calculateDisplaySize(0.016);
 
-    double titleLargeSize = calculateDisplaySize(0.016);
-    double titleMediumSize = calculateDisplaySize(0.014);
-    double titleSmallSize = calculateDisplaySize(0.012);
+    double titleLargeSize = calculateDisplaySize(0.014);
+    double titleMediumSize = calculateDisplaySize(0.012);
+    double titleSmallSize = calculateDisplaySize(0.010);
 
-    double bodyLargeSize = calculateDisplaySize(0.010);
-    double bodyMediumSize = calculateDisplaySize(0.008);
-    double bodySmallSize = calculateDisplaySize(0.006);
+    double bodyLargeSize = calculateDisplaySize(0.008);
+    double bodyMediumSize = calculateDisplaySize(0.006);
+    double bodySmallSize = calculateDisplaySize(0.004);
 
     Color color =
         brightness == Brightness.light
@@ -65,32 +65,32 @@ class AppTheme {
         ),
         titleLarge: TextStyle(
           fontSize: titleLargeSize,
-          fontWeight: FontWeight.bold,
+          fontWeight: FontWeight.w600,
           color: color,
         ),
         titleMedium: TextStyle(
           fontSize: titleMediumSize,
-          fontWeight: FontWeight.w500,
+          fontWeight: FontWeight.w400,
           color: color,
         ),
         titleSmall: TextStyle(
           fontSize: titleSmallSize,
-          fontWeight: FontWeight.w400,
+          fontWeight: FontWeight.w200,
           color: color,
         ),
         bodyLarge: TextStyle(
           fontSize: bodyLargeSize,
-          fontWeight: FontWeight.bold,
+          fontWeight: FontWeight.w400,
           color: color,
         ),
         bodyMedium: TextStyle(
           fontSize: bodyMediumSize,
-          fontWeight: FontWeight.w500,
+          fontWeight: FontWeight.w400,
           color: color,
         ),
         bodySmall: TextStyle(
           fontSize: bodySmallSize,
-          fontWeight: FontWeight.w400,
+          fontWeight: FontWeight.w200,
           color: color,
         ),
       ),

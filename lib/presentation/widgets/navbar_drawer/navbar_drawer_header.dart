@@ -46,7 +46,7 @@ class NavBarDrawerHeader extends StatelessWidget {
                   : Icons.dark_mode,
             ),
             onPressed: () {
-              context.read<ThemeCubit>().toggleTheme(); // Alterna el tema
+              context.read<ThemeCubit>().toggleTheme();
             },
           ),
         ),
