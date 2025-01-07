@@ -16,35 +16,35 @@
         "tags": {
             "Java": {
                 "icon": "assets/icons/dev_icons/java.svg",
-                "color": "255,0,0,0"
+                "color": "255,219,110,9"
             },
             "Django": {
                 "icon": "assets/icons/dev_icons/django.svg",
-                "color": "255,0,0,0"
+                "color": "255,76,175,80"
             },
             "Python": {
                 "icon": "assets/icons/dev_icons/python.svg",
-                "color": "255,0,0,0"
+                "color": "255,139,195,74"
             },
             "HTML": {
                 "icon": "assets/icons/dev_icons/html.svg",
-                "color": "255,0,0,0"
+                "color": "255,233,30,99"
             },
             "CSS": {
                 "icon": "assets/icons/dev_icons/css.svg",
-                "color": "255,0,0,0"
+                "color": "255,0,188,212"
             },
             "Bootstrap": {
                 "icon": "assets/icons/dev_icons/bootstrap.svg",
-                "color": "255,0,0,0"
+                "color": "255,103,58,183" 
             },
             "JS": {
                 "icon": "assets/icons/dev_icons/js.svg",
-                "color": "255,0,0,0"
+                "color": "255,255,193,7"
             },
             "Postgres SQL": {
                 "icon": "assets/icons/dev_icons/postgresql.svg",
-                "color": "255,0,0,0"
+                "color": "255,33,150,243"
             }
         }
     },
@@ -61,15 +61,48 @@
         "tags": {
             "React": {
                 "icon": "assets/icons/dev_icons/react.svg",
-                "color": "255,0,0,0"
+                "color": "255,3,169,244"
             },
             "Tailwind CSS": {
                 "icon": "assets/icons/dev_icons/tailwind.svg",
-                "color": "255,0,0,0"
+                "color": "255,0,150,136"
             },
             "Flutter": {
                 "icon": "assets/icons/dev_icons/flutter.svg",
-                "color": "255,0,0,0"
+                "color": "255,33,150,243"
+            }
+        }
+    },
+    "soft_skills": {
+        "title": "Soft Skills",
+        "description": [
+            "Analytical and Critical Thinking.",
+            "Planning and Coordination.",
+            "Interpersonal Communication.",
+            "Self-Motivated.",
+            "Dependable and Responsible.",
+            "Active Listening.",
+            "Training and Development."
+        ]
+    },
+    "languages": {
+        "title": "Languages",
+        "description": [
+            "Spanish: Native or Bilingual.",
+            "English: Professional Working."
+        ]
+    },
+    "additional": {
+        "title": "Additional",
+        "description": "Development of videogames.",
+        "tags": {
+            "Godot": {
+                "icon": "assets/icons/dev_icons/godot.svg",
+                "color": "255,255,152,0"
+            },
+            "Roblox Studio": {
+                "icon": "assets/icons/dev_icons/roblox.svg",
+                "color": "255,244,67,54"
             }
         }
     }

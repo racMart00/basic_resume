@@ -58,7 +58,7 @@ class _AboutViewDesktopState extends State<AboutViewDesktop> {
                         ),
                       ),
                       Container(
-                        width: size.width * 0.18,
+                        width: size.width * 0.225,
                         padding: EdgeInsets.symmetric(
                           horizontal: size.height * 0.01,
                         ),

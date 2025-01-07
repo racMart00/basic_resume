@@ -2,9 +2,9 @@ export 'package:basic_resume/presentation/views/about_view/about_view_desktop.da
 export 'package:basic_resume/presentation/views/about_view/about_view_mobile.dart';
 export 'package:basic_resume/presentation/views/about_view/about_view_tablet.dart';
 export 'package:basic_resume/presentation/views/about_view/about_view.dart';
-export 'package:basic_resume/presentation/views/about_view/dev_icon.dart';
-export 'package:basic_resume/presentation/views/about_view/section.dart';
 export 'package:basic_resume/presentation/views/about_view/tag_icon.dart';
+export 'package:basic_resume/presentation/views/about_view/section.dart';
+export 'package:basic_resume/presentation/views/about_view/dev_tag.dart';
 export 'package:basic_resume/presentation/views/home_view/home_content_desktop.dart';
 export 'package:basic_resume/presentation/views/home_view/home_content_mobile.dart';
 export 'package:basic_resume/presentation/views/home_view/home_view.dart';

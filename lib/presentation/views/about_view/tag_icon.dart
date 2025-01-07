@@ -1,43 +1,32 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
-import 'package:basic_resume/presentation/presentation.dart';
-
-class TagIcon extends StatelessWidget {
-  final String tagTitle;
-  final Color tagColor;
+class DevIcon extends StatelessWidget {
   final String svgDir;
   final String svgTitle;
 
-  const TagIcon({
-    super.key,
-    required this.tagTitle,
-    required this.tagColor,
-    required this.svgDir,
-    required this.svgTitle,
-  });
+  const DevIcon({super.key, required this.svgDir, required this.svgTitle});
 
   @override
   Widget build(BuildContext context) {
-    final Size size = MediaQuery.of(context).size;
+    // final Size size = MediaQuery.of(context).size;
 
     return Container(
-      padding: EdgeInsets.symmetric(
-        horizontal: size.width * 0.01,
-        vertical: size.height * 0.005,
-      ),
+      height: 18,
+      width: 18,
+      // padding: EdgeInsets.symmetric(
+      //   horizontal: size.width * 0.005,
+      //   vertical: size.height * 0.005,
+      // ),
       decoration: BoxDecoration(
-        color: tagColor,
-        borderRadius: BorderRadius.circular(8),
+        color: Colors.transparent,
+        borderRadius: BorderRadius.circular(14),
       ),
-      child: Row(
-        mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(tagTitle, style: Theme.of(context).textTheme.bodyMedium),
-          SizedBox(width: size.width * 0.006,),
-          DevIcon(svgDir: svgDir, svgTitle: svgTitle),
-        ],
+      child: SvgPicture.asset(
+        svgDir,
+        semanticsLabel: svgTitle,
+        fit: BoxFit.contain,
+        colorFilter: ColorFilter.mode(Colors.white, BlendMode.srcIn),
       ),
     );
   }

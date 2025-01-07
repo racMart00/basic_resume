@@ -16,7 +16,7 @@
         "tags": {
             "Java": {
                 "icon": "assets/icons/dev_icons/java.svg",
-                "color": "255,255,87,34"
+                "color": "255,219,110,9"
             },
             "Django": {
                 "icon": "assets/icons/dev_icons/django.svg",
@@ -24,7 +24,7 @@
             },
             "Python": {
                 "icon": "assets/icons/dev_icons/python.svg",
-                "color": "255,33,150,243"
+                "color": "255,139,195,74"
             },
             "HTML": {
                 "icon": "assets/icons/dev_icons/html.svg",
@@ -36,7 +36,7 @@
             },
             "Bootstrap": {
                 "icon": "assets/icons/dev_icons/bootstrap.svg",
-                "color": "255,255,235,59"
+                "color": "255,103,58,183" 
             },
             "JS": {
                 "icon": "assets/icons/dev_icons/js.svg",
@@ -44,7 +44,7 @@
             },
             "Postgres SQL": {
                 "icon": "assets/icons/dev_icons/postgresql.svg",
-                "color": "255,103,58,183"
+                "color": "255,33,150,243"
             }
         }
     },
@@ -65,11 +65,11 @@
             },
             "Tailwind CSS": {
                 "icon": "assets/icons/dev_icons/tailwind.svg",
-                "color": "255,139,195,74"
+                "color": "255,0,150,136"
             },
             "Flutter": {
                 "icon": "assets/icons/dev_icons/flutter.svg",
-                "color": "255,0,150,136"
+                "color": "255,33,150,243"
             }
         }
     },
