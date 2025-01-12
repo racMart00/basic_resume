@@ -10,6 +10,7 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenTypeLayout.builder(
       mobile: (BuildContext context) => HomeContentMobile(),
+      tablet: (BuildContext context) => HomeContentTablet(),
       desktop: (BuildContext context) => HomeContentDesktop(),
     );
   }

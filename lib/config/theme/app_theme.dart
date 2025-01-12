@@ -15,13 +15,15 @@ class AppTheme {
     SizingInformation sizingInformation,
     Brightness brightness,
   ) {
+
     double calculateDisplaySize(double baseSize) {
       switch (sizingInformation.deviceScreenType) {
         case DeviceScreenType.desktop:
           return size.width *
               (baseSize + 0.004);
         case DeviceScreenType.tablet:
-          return size.height * baseSize;
+          return size.width *
+              (baseSize + 0.0035);
         case DeviceScreenType.mobile:
         default:
           return size.height * (baseSize + 0.004);

@@ -51,12 +51,12 @@ class CourseDetails extends StatelessWidget {
                   ),
                   SizedBox(height: spacing),
                   Text(
-                    'Rafa Martinez',
+                    'Rafael A. Castillo Martinez',
                     style: Theme.of(context).textTheme.displayLarge,
                   ),
                   SizedBox(height: spacing),
                   Text(
-                    'La descripción es un discurso (oral o escrito) que detalla y explica las características de un lugar, persona, animal, cosa o situación. Por ejemplo: Era un lugar enorme, muy luminoso y con una vista privilegiada.',
+                    'Detail-oriented and skilled in software development. Proactive team player committed to company success. Reliable and adaptable with strong analytical and communication skills. Seeking a full-time role for growth and professional development.',
                     style: Theme.of(context).textTheme.displayMedium,
                   ),
                 ],

@@ -10,7 +10,7 @@ class HomeContentDesktop extends StatelessWidget {
     final Size size = MediaQuery.of(context).size;
 
     return Row(
-      mainAxisAlignment: MainAxisAlignment.start,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Column(
