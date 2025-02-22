@@ -29,6 +29,7 @@ class TagResponse {
   }
 
   static String _colorToString(Color color) {
-    return '${color.a},${color.r},${color.g},${color.b}';
+    return '${color.alpha},${color.red},${color.green},${color.blue}';
+    // return '${color.a},${color.r},${color.g},${color.b}';
   }
 }

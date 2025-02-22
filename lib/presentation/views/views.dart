@@ -1,6 +1,7 @@
 export 'package:basic_resume/presentation/views/about_view/about_view_desktop.dart';
 export 'package:basic_resume/presentation/views/about_view/about_view_mobile.dart';
 export 'package:basic_resume/presentation/views/about_view/about_view_tablet.dart';
+export 'package:basic_resume/presentation/views/about_view/about_view_utils.dart';
 export 'package:basic_resume/presentation/views/about_view/about_view.dart';
 export 'package:basic_resume/presentation/views/about_view/tag_icon.dart';
 export 'package:basic_resume/presentation/views/about_view/section.dart';
