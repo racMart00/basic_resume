@@ -3,9 +3,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 // Estado del Cubit
 class ThemeState {
-  final ThemeMode themeMode;
 
   ThemeState(this.themeMode);
+  final ThemeMode themeMode;
 }
 
 // Cubit para gestionar el tema

@@ -6,8 +6,6 @@ class CallToAction extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisSize: MainAxisSize.max,
-      mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         CallToActionButton(
@@ -15,7 +13,7 @@ class CallToAction extends StatelessWidget {
           color: Theme.of(context).colorScheme.onPrimaryFixedVariant,
           textColor: Colors.white,
         ),
-        SizedBox(width: 10),
+        const SizedBox(width: 10),
         CallToActionButton(
           title: 'My Work',
           color: Theme.of(context).colorScheme.inverseSurface,
@@ -27,15 +25,13 @@ class CallToAction extends StatelessWidget {
 }
 
 class CallToActionButton extends StatelessWidget {
+
+  const CallToActionButton({
+    required this.color, required this.title, required this.textColor, super.key,
+  });
   final String title;
   final Color color;
   final Color textColor;
-
-  const CallToActionButton({
-    super.key,
-    required this.color,
-    required this.title, required this.textColor,
-  });
 
   @override
   Widget build(BuildContext context) {

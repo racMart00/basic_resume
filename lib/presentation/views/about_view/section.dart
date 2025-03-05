@@ -1,18 +1,10 @@
-import 'package:flutter/material.dart';
-import 'package:carousel_slider/carousel_slider.dart';
-import 'package:responsive_builder/responsive_builder.dart';
-
 import 'package:basic_resume/domain/domain.dart';
 import 'package:basic_resume/presentation/presentation.dart';
+import 'package:carousel_slider/carousel_slider.dart';
+import 'package:flutter/material.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 
 class Section extends StatefulWidget {
-  final String title;
-  final String? subtitle;
-  final String? where;
-  final String? date;
-  final double? carrouselHeight;
-  final dynamic description;
-  final Map<String, TagEntity>? tags;
 
   const Section({
     super.key,
@@ -24,6 +16,13 @@ class Section extends StatefulWidget {
     required this.description,
     this.tags,
   });
+  final String title;
+  final String? subtitle;
+  final String? where;
+  final String? date;
+  final double? carrouselHeight;
+  final dynamic description;
+  final Map<String, TagEntity>? tags;
 
   @override
   State<Section> createState() => _SectionState();
@@ -36,17 +35,16 @@ class _SectionState extends State<Section> {
 
   @override
   Widget build(BuildContext context) {
-    final Size size = MediaQuery.of(context).size;
+    final size = MediaQuery.of(context).size;
 
     return ResponsiveBuilder(
       builder: (context, sizingInformation) {
         return Column(
           mainAxisSize: MainAxisSize.min,
-          mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(widget.title, style: getSectionTextStyle(widget.title, sizingInformation, context)),
-            Divider(),
+            const Divider(),
             if (widget.subtitle != null) ...[
               Text(
                 widget.subtitle!,
@@ -77,12 +75,9 @@ class _SectionState extends State<Section> {
                       carouselController: carouselController,
                       options: CarouselOptions(
                         autoPlay: true,
-                        autoPlayInterval: Duration(seconds: 5),
+                        autoPlayInterval: const Duration(seconds: 5),
                         autoPlayCurve: Curves.easeIn,
-                        autoPlayAnimationDuration: Duration(milliseconds: 500),
-                        enableInfiniteScroll: true,
-                        scrollDirection: Axis.horizontal,
-                        initialPage: 0,
+                        autoPlayAnimationDuration: const Duration(milliseconds: 500),
                         viewportFraction: 1,
                         disableCenter: true,
                         height: widget.carrouselHeight,
@@ -136,7 +131,7 @@ class _SectionState extends State<Section> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              " - $desc",
+                              ' - $desc',
                               style: Theme.of(context).textTheme.bodyMedium,
                             ),
                             SizedBox(height: size.height * 0.0025),
@@ -148,8 +143,8 @@ class _SectionState extends State<Section> {
             SizedBox(height: size.height * 0.005),
             if (widget.tags != null) ...[
               Wrap(
-                spacing: 8.0,
-                runSpacing: 4.0,
+                spacing: 8,
+                runSpacing: 4,
                 children:
                     widget.tags!.entries.map((entry) {
                       return TagIcon(

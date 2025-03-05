@@ -6,11 +6,11 @@ class MyAvatar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Size size = MediaQuery.of(context).size;
+    final size = MediaQuery.of(context).size;
 
     return ResponsiveBuilder(
       builder: (context, sizingInformation) {
-        double boxSize = size.width * 1.25;
+        var boxSize = size.width * 1.25;
 
         switch (sizingInformation.deviceScreenType) {
           case DeviceScreenType.desktop:
@@ -32,7 +32,7 @@ class MyAvatar extends StatelessWidget {
                 color: Colors.blue,
                 shape: BoxShape.circle,
                 border: Border.all(color: Colors.white, width: 4),
-                image: DecorationImage(
+                image: const DecorationImage(
                   image: AssetImage('assets/images/avatar.png'),
                   fit: BoxFit.cover,
                 ),
@@ -60,7 +60,7 @@ class MyAvatar extends StatelessWidget {
                       color: Colors.blue,
                     ),
                   ),
-                  SizedBox(width: 100),
+                  const SizedBox(width: 100),
                   Container(
                     width: 50,
                     height: 50,
@@ -83,7 +83,7 @@ class MyAvatar extends StatelessWidget {
             ),
           ],
         );
-      }
+      },
     );
   }
 }

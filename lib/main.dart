@@ -1,8 +1,7 @@
+import 'package:basic_resume/config/config.dart';
+import 'package:basic_resume/presentation/presentation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
-import 'package:basic_resume/presentation/presentation.dart';
-import 'package:basic_resume/config/config.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 void main() {
@@ -14,7 +13,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Size size = MediaQuery.of(context).size;
+    final size = MediaQuery.of(context).size;
 
     return BlocProvider(
       create: (context) => ThemeCubit(),
@@ -29,7 +28,7 @@ class MyApp extends StatelessWidget {
                 themeMode: state.themeMode,
                 routerConfig: appRouter,
               );
-            }
+            },
           );
         },
       ),

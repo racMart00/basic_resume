@@ -5,7 +5,7 @@ class AboutViewTablet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Size size = MediaQuery.of(context).size;
+    final size = MediaQuery.of(context).size;
 
     return Row(
       children: [
@@ -16,7 +16,7 @@ class AboutViewTablet extends StatelessWidget {
                 child: Container(
                   color: Colors.green.shade400,
                   width: size.width,
-                  child: Text(
+                  child: const Text(
                     'Section 1',
                   ),
                 ),
@@ -31,7 +31,7 @@ class AboutViewTablet extends StatelessWidget {
               child: Container(
                 color: Colors.blue.shade400,
                 width: size.width * 0.3,
-                child: Text(
+                child: const Text(
                   'Section 2',
                 ),
               ),
@@ -40,7 +40,7 @@ class AboutViewTablet extends StatelessWidget {
               child: Container(
                 color: Colors.purple.shade400,
                 width: size.width * 0.3,
-                child: Text(
+                child: const Text(
                   'Section 3',
                 ),
               ),

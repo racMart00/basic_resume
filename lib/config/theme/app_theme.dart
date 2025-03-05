@@ -30,22 +30,22 @@ class AppTheme {
       }
     }
 
-    double displayLargeSize = calculateDisplaySize(0.020);
-    double displayMediumSize = calculateDisplaySize(0.018);
-    double displaySmallSize = calculateDisplaySize(0.016);
+    final displayLargeSize = calculateDisplaySize(0.020);
+    final displayMediumSize = calculateDisplaySize(0.018);
+    final displaySmallSize = calculateDisplaySize(0.016);
 
-    double titleLargeSize = calculateDisplaySize(0.014);
-    double titleMediumSize = calculateDisplaySize(0.012);
-    double titleSmallSize = calculateDisplaySize(0.010);
+    final titleLargeSize = calculateDisplaySize(0.014);
+    final titleMediumSize = calculateDisplaySize(0.012);
+    final titleSmallSize = calculateDisplaySize(0.010);
 
-    double bodyLargeSize = calculateDisplaySize(0.008);
-    double bodyMediumSize = calculateDisplaySize(0.006);
-    double bodySmallSize = calculateDisplaySize(0.004);
+    final bodyLargeSize = calculateDisplaySize(0.008);
+    final bodyMediumSize = calculateDisplaySize(0.006);
+    final bodySmallSize = calculateDisplaySize(0.004);
 
-    Color color =
+    final color =
         brightness == Brightness.light
-            ? ColorScheme.light().inverseSurface
-            : ColorScheme.dark().inverseSurface;
+            ? const ColorScheme.light().inverseSurface
+            : const ColorScheme.dark().inverseSurface;
 
     return ThemeData(
       brightness: brightness,

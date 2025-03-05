@@ -1,7 +1,6 @@
+import 'package:basic_resume/presentation/presentation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
-import 'package:basic_resume/presentation/presentation.dart';
 
 class NavBarDrawerHeader extends StatelessWidget {
   const NavBarDrawerHeader({super.key});

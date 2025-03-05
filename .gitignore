@@ -2,7 +2,6 @@
 build/*
 !build/web/
 !build/web/**
-flutter_linux_3.27.3-stable.tar.xz
 
 # Miscellaneous
 *.class

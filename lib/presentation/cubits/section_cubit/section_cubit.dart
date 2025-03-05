@@ -1,12 +1,11 @@
-import 'package:flutter_bloc/flutter_bloc.dart';
-
 import 'package:basic_resume/infrastructure/infrastructure.dart';
 import 'package:basic_resume/presentation/presentation.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class SectionCubit extends Cubit<SectionState> {
-  final SectionDatasource sectionDatasource;
 
   SectionCubit(this.sectionDatasource) : super(SectionInitial());
+  final SectionDatasource sectionDatasource;
 
   Future<void> fetchSections() async {
     emit(SectionLoading());

@@ -1,6 +1,5 @@
-import 'package:flutter/material.dart';
-
 import 'package:basic_resume/presentation/presentation.dart';
+import 'package:flutter/material.dart';
 
 class NavBarDrawer extends StatelessWidget {
   const NavBarDrawer({super.key});
@@ -12,8 +11,7 @@ class NavBarDrawer extends StatelessWidget {
       decoration: BoxDecoration(
         boxShadow: [BoxShadow(color: Theme.of(context).colorScheme.surface)],
       ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
+      child: const Column(
         children: [
           NavBarDrawerHeader(),
           DrawerItem(title: 'Home', icon: Icons.home_filled, path: '/0',),

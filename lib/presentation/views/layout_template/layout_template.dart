@@ -1,12 +1,11 @@
+import 'package:basic_resume/presentation/presentation.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
-import 'package:basic_resume/presentation/presentation.dart';
-
 class LayoutTemplate extends StatelessWidget {
-  final int pageIndex;
 
-  const LayoutTemplate({super.key, required this.pageIndex});
+  const LayoutTemplate({required this.pageIndex, super.key});
+  final int pageIndex;
 
   final viewRoutes = const <Widget>[HomeView(), AboutView()];
 
@@ -17,12 +16,12 @@ class LayoutTemplate extends StatelessWidget {
           (context, sizingInformation) => Scaffold(
             drawer:
                 sizingInformation.deviceScreenType == DeviceScreenType.mobile
-                    ? NavBarDrawer()
+                    ? const NavBarDrawer()
                     : null,
             body: CenteredView(
               child: Column(
                 children: [
-                  CustomNavBar(),
+                  const CustomNavBar(),
                   Expanded(
                     child: IndexedStack(index: pageIndex, children: viewRoutes),
                   ),

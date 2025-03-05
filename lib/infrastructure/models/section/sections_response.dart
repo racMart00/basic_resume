@@ -1,21 +1,6 @@
 import 'package:basic_resume/infrastructure/infrastructure.dart';
 
 class SectionsResponse {
-  final String title;
-  final String? subtitle;
-  final String? where;
-  final String? date;
-  final dynamic description;
-  final Map<String, TagResponse>? tags;
-
-  SectionsResponse({
-    required this.title,
-    this.subtitle,
-    this.where,
-    this.date,
-    required this.description,
-    this.tags,
-  });
 
   factory SectionsResponse.fromJson(Map<String, dynamic> json) {
     return SectionsResponse(
@@ -30,6 +15,21 @@ class SectionsResponse {
           MapEntry(key, TagResponse.fromJson(value))), // Use TagResponse
     );
   }
+
+  SectionsResponse({
+    required this.title,
+    this.subtitle,
+    this.where,
+    this.date,
+    required this.description,
+    this.tags,
+  });
+  final String title;
+  final String? subtitle;
+  final String? where;
+  final String? date;
+  final dynamic description;
+  final Map<String, TagResponse>? tags;
 
   Map<String, dynamic> toJson() {
     return {

@@ -1,8 +1,7 @@
+import 'package:basic_resume/presentation/presentation.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:carousel_slider/carousel_slider.dart';
-
-import 'package:basic_resume/presentation/presentation.dart';
 
 class AboutViewDesktop extends StatefulWidget {
   const AboutViewDesktop({super.key});
@@ -24,13 +23,12 @@ class _AboutViewDesktopState extends State<AboutViewDesktop> {
 
   @override
   Widget build(BuildContext context) {
-    final Size size = MediaQuery.of(context).size;
+    final size = MediaQuery.of(context).size;
 
     return BlocBuilder<SectionCubit, SectionState>(
       builder: (context, state) {
         return SingleChildScrollView(
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
             children: [
@@ -70,14 +68,11 @@ class _AboutViewDesktopState extends State<AboutViewDesktop> {
                                 carouselController: _carouselController,
                                 options: CarouselOptions(
                                   autoPlay: true,
-                                  autoPlayInterval: Duration(seconds: 10),
+                                  autoPlayInterval: const Duration(seconds: 10),
                                   autoPlayCurve: Curves.easeIn,
-                                  autoPlayAnimationDuration: Duration(
+                                  autoPlayAnimationDuration: const Duration(
                                     milliseconds: 500,
                                   ),
-                                  enableInfiniteScroll: true,
-                                  scrollDirection: Axis.horizontal,
-                                  initialPage: 0,
                                   viewportFraction: 1,
                                   disableCenter: true,
                                   height: size.width * 0.22,
@@ -88,39 +83,33 @@ class _AboutViewDesktopState extends State<AboutViewDesktop> {
                                   },
                                 ),
                                 items: [
-                                  state is SectionLoaded
-                                      ? Section(
+                                  if (state is SectionLoaded) Section(
                                         title: state.sections[3].title,
                                         description:
                                             state.sections[3].description,
-                                      )
-                                      : state is SectionError
-                                      ? Text((state).message)
+                                      ) else state is SectionError
+                                      ? Text(state.message)
                                       : PhantomProgressIndicator(
                                         size: size,
                                         boxWidth: 0.45,
                                       ),
-                                  state is SectionLoaded
-                                      ? Section(
+                                  if (state is SectionLoaded) Section(
                                         title: state.sections[4].title,
                                         description:
                                             state.sections[4].description,
-                                      )
-                                      : state is SectionError
-                                      ? Text((state).message)
+                                      ) else state is SectionError
+                                      ? Text(state.message)
                                       : PhantomProgressIndicator(
                                         size: size,
                                         boxWidth: 0.45,
                                       ),
-                                  state is SectionLoaded
-                                      ? Section(
+                                  if (state is SectionLoaded) Section(
                                         title: state.sections[5].title,
                                         description:
                                             state.sections[5].description,
                                         tags: state.sections[5].tags,
-                                      )
-                                      : state is SectionError
-                                      ? Text((state).message)
+                                      ) else state is SectionError
+                                      ? Text(state.message)
                                       : PhantomProgressIndicator(
                                         size: size,
                                         boxWidth: 0.45,
@@ -159,7 +148,7 @@ class _AboutViewDesktopState extends State<AboutViewDesktop> {
                                 description: state.sections[0].description,
                               )
                               : state is SectionError
-                              ? Text((state).message)
+                              ? Text(state.message)
                               : PhantomProgressIndicator(
                                 size: size,
                                 boxWidth: 0.45,
@@ -188,7 +177,7 @@ class _AboutViewDesktopState extends State<AboutViewDesktop> {
                               tags: state.sections[1].tags,
                             )
                             : state is SectionError
-                            ? Text((state).message)
+                            ? Text(state.message)
                             : PhantomProgressIndicator(
                               size: size,
                               boxWidth: 0.45,
@@ -209,7 +198,7 @@ class _AboutViewDesktopState extends State<AboutViewDesktop> {
                               tags: state.sections[2].tags,
                             )
                             : state is SectionError
-                            ? Text((state).message)
+                            ? Text(state.message)
                             : PhantomProgressIndicator(
                               size: size,
                               boxWidth: 0.45,
@@ -226,25 +215,23 @@ class _AboutViewDesktopState extends State<AboutViewDesktop> {
 }
 
 class DotIndicator extends StatelessWidget {
+
+  const DotIndicator({
+    required this.currentIndex, required this.dotCount, super.key,
+  });
   final int currentIndex;
   final int dotCount;
 
-  const DotIndicator({
-    super.key,
-    required this.currentIndex,
-    required this.dotCount,
-  });
-
   @override
   Widget build(BuildContext context) {
-    final Size size = MediaQuery.of(context).size;
+    final size = MediaQuery.of(context).size;
 
     return Row(
       mainAxisAlignment: MainAxisAlignment.end,
       children: List.generate(dotCount, (index) {
         return AnimatedContainer(
-          duration: Duration(milliseconds: 400),
-          margin: EdgeInsets.symmetric(horizontal: 4.0),
+          duration: const Duration(milliseconds: 400),
+          margin: const EdgeInsets.symmetric(horizontal: 4),
           width: (currentIndex == index) ? ( size.width * 0.008) : (size.width * 0.006),
           height: (currentIndex == index) ? ( size.width * 0.008) : (size.width * 0.006),
           decoration: BoxDecoration(
@@ -261,24 +248,21 @@ class DotIndicator extends StatelessWidget {
 }
 
 class PhantomProgressIndicator extends StatelessWidget {
+
+  const PhantomProgressIndicator({
+    required this.size, required this.boxWidth, super.key,
+  });
   final Size size;
   final double boxWidth;
 
-  const PhantomProgressIndicator({
-    super.key,
-    required this.size,
-    required this.boxWidth,
-  });
-
   @override
   Widget build(BuildContext context) {
-    final List<double> widths = [0.35, 0.3, 0.4, 0.4, 0.4, 0.4];
-    final double heightFactor = 0.02;
-    final double spacingFactor = 0.015;
+    final widths = <double>[0.35, 0.3, 0.4, 0.4, 0.4, 0.4];
+    const heightFactor = 0.02;
+    const spacingFactor = 0.015;
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
-      mainAxisAlignment: MainAxisAlignment.start,
       children: List.generate(widths.length, (index) {
         return Column(
           children: [

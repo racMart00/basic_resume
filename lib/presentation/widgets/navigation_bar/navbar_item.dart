@@ -2,16 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 class NavBarItem extends StatelessWidget {
+
+  const NavBarItem({
+    required this.title, required this.path, required this.icon, super.key,
+  });
   final String title;
   final IconData icon;
   final String path;
-
-  const NavBarItem({
-    super.key,
-    required this.title,
-    required this.path,
-    required this.icon,
-  });
 
   @override
   Widget build(BuildContext context) {

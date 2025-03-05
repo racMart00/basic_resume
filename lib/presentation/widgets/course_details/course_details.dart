@@ -6,11 +6,11 @@ class CourseDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Size size = MediaQuery.of(context).size;
+    final size = MediaQuery.of(context).size;
 
     return ResponsiveBuilder(
       builder: (context, sizingInformation) {
-        double spacing = size.height * 0.02;
+        var spacing = size.height * 0.02;
 
         switch (sizingInformation.deviceScreenType) {
           case DeviceScreenType.desktop:
@@ -22,7 +22,7 @@ class CourseDetails extends StatelessWidget {
           default:
         }                
 
-        double boxSize = size.height * 1.25;
+        var boxSize = size.height * 1.25;
 
         switch (sizingInformation.deviceScreenType) {
           case DeviceScreenType.desktop:
@@ -37,7 +37,6 @@ class CourseDetails extends StatelessWidget {
         return SizedBox(
           width: boxSize,
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Column(

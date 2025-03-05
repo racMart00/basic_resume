@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
 class CenteredView extends StatelessWidget {
-  final Widget child;
 
-  const CenteredView({super.key, required this.child});
+  const CenteredView({required this.child, super.key});
+  final Widget child;
 
   @override
   Widget build(BuildContext context) {
-    final Size size = MediaQuery.of(context).size;
+    final size = MediaQuery.of(context).size;
 
     return Container(
       padding: EdgeInsets.symmetric(

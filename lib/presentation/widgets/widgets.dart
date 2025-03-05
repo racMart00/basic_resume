@@ -3,10 +3,10 @@ export 'package:basic_resume/presentation/widgets/centered_view/centered_view.da
 export 'package:basic_resume/presentation/widgets/course_details/course_details.dart';
 export 'package:basic_resume/presentation/widgets/my_avatar/my_avatar.dart';
 export 'package:basic_resume/presentation/widgets/navbar_drawer/drawer_item.dart';
-export 'package:basic_resume/presentation/widgets/navbar_drawer/navbar_drawer_header.dart';
 export 'package:basic_resume/presentation/widgets/navbar_drawer/navbar_drawer.dart';
+export 'package:basic_resume/presentation/widgets/navbar_drawer/navbar_drawer_header.dart';
+export 'package:basic_resume/presentation/widgets/navigation_bar/custom_navbar.dart';
 export 'package:basic_resume/presentation/widgets/navigation_bar/custom_navbar_mobile.dart';
 export 'package:basic_resume/presentation/widgets/navigation_bar/custom_navbar_tablet_desktop.dart';
-export 'package:basic_resume/presentation/widgets/navigation_bar/custom_navbar.dart';
 export 'package:basic_resume/presentation/widgets/navigation_bar/navbar_item.dart';
 export 'package:basic_resume/presentation/widgets/navigation_bar/navbar_logo.dart';

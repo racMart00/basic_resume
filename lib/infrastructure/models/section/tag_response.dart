@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
 class TagResponse {
-  final String icon;
-  final Color color;
 
   TagResponse({
     required this.icon,
@@ -15,6 +13,8 @@ class TagResponse {
       color: _colorFromString(json['color']),
     );
   }
+  final String icon;
+  final Color color;
 
   Map<String, dynamic> toJson() {
     return {

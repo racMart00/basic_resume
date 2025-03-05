@@ -17,36 +17,28 @@ TextStyle? getSectionTextStyle(
       switch (sizingInformation.deviceScreenType) {
         case DeviceScreenType.desktop:
           textStyle = Theme.of(context).textTheme.titleSmall;
-          break;
         case DeviceScreenType.tablet:
           textStyle = Theme.of(context).textTheme.titleMedium;
-          break;
         case DeviceScreenType.mobile:
         default:
           textStyle = Theme.of(context).textTheme.titleLarge;
       }
-      break;
     case 'subtitle':
       switch (sizingInformation.deviceScreenType) {
         case DeviceScreenType.desktop:
           textStyle = Theme.of(context).textTheme.bodyLarge;
-          break;
         case DeviceScreenType.tablet:
           textStyle = Theme.of(context).textTheme.bodyLarge;
-          break;
         case DeviceScreenType.mobile:
         default:
           textStyle = Theme.of(context).textTheme.bodyLarge;
       }
-      break;
     case 'where':
       switch (sizingInformation.deviceScreenType) {
         case DeviceScreenType.desktop:
           textStyle = Theme.of(context).textTheme.bodySmall;
-          break;
         case DeviceScreenType.tablet:
           textStyle = Theme.of(context).textTheme.bodySmall;
-          break;
         case DeviceScreenType.mobile:
         default:
           textStyle = Theme.of(context).textTheme.bodySmall;
@@ -55,10 +47,8 @@ TextStyle? getSectionTextStyle(
       switch (sizingInformation.deviceScreenType) {
         case DeviceScreenType.desktop:
           textStyle = Theme.of(context).textTheme.bodySmall;
-          break;
         case DeviceScreenType.tablet:
           textStyle = Theme.of(context).textTheme.bodySmall;
-          break;
         case DeviceScreenType.mobile:
         default:
           textStyle = Theme.of(context).textTheme.bodySmall;
@@ -67,10 +57,8 @@ TextStyle? getSectionTextStyle(
       switch (sizingInformation.deviceScreenType) {
         case DeviceScreenType.desktop:
           textStyle = Theme.of(context).textTheme.bodySmall;
-          break;
         case DeviceScreenType.tablet:
           textStyle = Theme.of(context).textTheme.bodyMedium;
-          break;
         case DeviceScreenType.mobile:
         default:
           textStyle = Theme.of(context).textTheme.bodyLarge;
@@ -79,10 +67,8 @@ TextStyle? getSectionTextStyle(
       switch (sizingInformation.deviceScreenType) {
         case DeviceScreenType.desktop:
           textStyle = Theme.of(context).textTheme.bodySmall;
-          break;
         case DeviceScreenType.tablet:
           textStyle = Theme.of(context).textTheme.bodySmall;
-          break;
         case DeviceScreenType.mobile:
         default:
           textStyle = Theme.of(context).textTheme.bodySmall;
@@ -91,10 +77,8 @@ TextStyle? getSectionTextStyle(
       switch (sizingInformation.deviceScreenType) {
         case DeviceScreenType.desktop:
           textStyle = Theme.of(context).textTheme.bodySmall;
-          break;
         case DeviceScreenType.tablet:
           textStyle = Theme.of(context).textTheme.bodySmall;
-          break;
         case DeviceScreenType.mobile:
         default:
           textStyle = Theme.of(context).textTheme.bodySmall;

@@ -1,6 +1,5 @@
-import "package:go_router/go_router.dart";
-
-import "package:basic_resume/presentation/presentation.dart";
+import 'package:basic_resume/presentation/presentation.dart';
+import 'package:go_router/go_router.dart';
 
 final appRouter = GoRouter(
   initialLocation: '/0', // default: /0
@@ -18,10 +17,7 @@ final appRouter = GoRouter(
 
         return LayoutTemplate( pageIndex: pageIndex, );
       },
-      routes: [
-
-      ]
     ),
 
-  ]
+  ],
 );

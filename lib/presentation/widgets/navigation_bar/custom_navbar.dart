@@ -1,7 +1,6 @@
+import 'package:basic_resume/presentation/presentation.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
-
-import 'package:basic_resume/presentation/presentation.dart';
 
 class CustomNavBar extends StatelessWidget {
   const CustomNavBar({super.key});
@@ -9,8 +8,8 @@ class CustomNavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenTypeLayout.builder(
-      mobile: (BuildContext context) => CustomNavBarMobile(),
-      tablet: (BuildContext context) => CustomNavBarTabletDesktop(),
+      mobile: (BuildContext context) => const CustomNavBarMobile(),
+      tablet: (BuildContext context) => const CustomNavBarTabletDesktop(),
     );
   }
 }

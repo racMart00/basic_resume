@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class DevIcon extends StatelessWidget {
+
+  const DevIcon({required this.svgDir, required this.svgTitle, super.key});
   final String svgDir;
   final String svgTitle;
-
-  const DevIcon({super.key, required this.svgDir, required this.svgTitle});
 
   @override
   Widget build(BuildContext context) {
@@ -25,8 +25,7 @@ class DevIcon extends StatelessWidget {
       child: SvgPicture.asset(
         svgDir,
         semanticsLabel: svgTitle,
-        fit: BoxFit.contain,
-        colorFilter: ColorFilter.mode(Colors.white, BlendMode.srcIn),
+        colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn),
       ),
     );
   }

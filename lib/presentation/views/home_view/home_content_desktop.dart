@@ -1,29 +1,27 @@
-import 'package:flutter/material.dart';
-
 import 'package:basic_resume/presentation/presentation.dart';
+import 'package:flutter/material.dart';
 
 class HomeContentDesktop extends StatelessWidget {
   const HomeContentDesktop({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final Size size = MediaQuery.of(context).size;
+    final size = MediaQuery.of(context).size;
 
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            CourseDetails(),
+            const CourseDetails(),
             SizedBox(height: size.height * 0.05),
-            CallToAction(),
+            const CallToAction(),
           ],
         ),
         SizedBox(width: size.height * 0.025),
-        MyAvatar()
+        const MyAvatar(),
       ],
     );
   }
