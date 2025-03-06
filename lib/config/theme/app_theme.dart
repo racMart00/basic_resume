@@ -15,18 +15,23 @@ class AppTheme {
     SizingInformation sizingInformation,
     Brightness brightness,
   ) {
-
     double calculateDisplaySize(double baseSize) {
-      switch (sizingInformation.deviceScreenType) {
-        case DeviceScreenType.desktop:
-          return size.width *
-              (baseSize + 0.004);
-        case DeviceScreenType.tablet:
-          return size.width *
-              (baseSize + 0.0035);
-        case DeviceScreenType.mobile:
-        default:
-          return size.height * (baseSize + 0.004);
+      if (sizingInformation.deviceScreenType == DeviceScreenType.desktop) {
+        return size.width * (baseSize + 0.004);
+      } else if (sizingInformation.deviceScreenType ==
+          DeviceScreenType.tablet) {
+        return size.width * (baseSize + 0.0035);
+      } else if (sizingInformation.deviceScreenType ==
+          DeviceScreenType.mobile) {
+        return size.height * (baseSize + 0.004);
+      } else {
+        // Handle unexpected cases (e.g., null or unknown enum value)
+        // You can throw an exception, return a default value,
+        // or do something else.
+        // Example:
+        throw Exception('Invalid or null DeviceScreenType.');
+        // or
+        // return 0.0; // Default value
       }
     }
 
@@ -42,10 +47,9 @@ class AppTheme {
     final bodyMediumSize = calculateDisplaySize(0.006);
     final bodySmallSize = calculateDisplaySize(0.004);
 
-    final color =
-        brightness == Brightness.light
-            ? const ColorScheme.light().inverseSurface
-            : const ColorScheme.dark().inverseSurface;
+    final color = brightness == Brightness.light
+        ? const ColorScheme.light().inverseSurface
+        : const ColorScheme.dark().inverseSurface;
 
     return ThemeData(
       brightness: brightness,

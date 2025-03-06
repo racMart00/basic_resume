@@ -1,20 +1,22 @@
 import 'dart:convert';
-
 import 'package:basic_resume/domain/domain.dart';
 import 'package:basic_resume/infrastructure/infrastructure.dart';
 import 'package:flutter/services.dart';
 
-class SectionDatasource extends SectionsDatasources {
+class SectionDatasource with SectionsDatasources {
   @override
   Future<List<SectionEntity>> getSections() async {
     final response = await rootBundle.loadString('assets/db/sections.json');
-    final Map<String, dynamic> data = json.decode(response);
+    final dynamic decodedData = json.decode(response);
+    final data = decodedData as Map<String, dynamic>;
 
     final sections = <SectionEntity>[];
 
-    data.forEach((key, value) {
+    data.forEach((key, dynamic value) {
       sections.add(
-        SectionMapper.sectionModelToEntity(SectionsResponse.fromJson(value)),
+        SectionMapper.sectionModelToEntity(
+          SectionsResponse.fromJson(value as Map<String, dynamic>),
+        ),
       );
     });
 

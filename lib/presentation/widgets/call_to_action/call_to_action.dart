@@ -25,9 +25,11 @@ class CallToAction extends StatelessWidget {
 }
 
 class CallToActionButton extends StatelessWidget {
-
   const CallToActionButton({
-    required this.color, required this.title, required this.textColor, super.key,
+    required this.color,
+    required this.title,
+    required this.textColor,
+    super.key,
   });
   final String title;
   final Color color;

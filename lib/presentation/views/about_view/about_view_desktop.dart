@@ -83,37 +83,46 @@ class _AboutViewDesktopState extends State<AboutViewDesktop> {
                                   },
                                 ),
                                 items: [
-                                  if (state is SectionLoaded) Section(
-                                        title: state.sections[3].title,
-                                        description:
-                                            state.sections[3].description,
-                                      ) else state is SectionError
-                                      ? Text(state.message)
-                                      : PhantomProgressIndicator(
-                                        size: size,
-                                        boxWidth: 0.45,
-                                      ),
-                                  if (state is SectionLoaded) Section(
-                                        title: state.sections[4].title,
-                                        description:
-                                            state.sections[4].description,
-                                      ) else state is SectionError
-                                      ? Text(state.message)
-                                      : PhantomProgressIndicator(
-                                        size: size,
-                                        boxWidth: 0.45,
-                                      ),
-                                  if (state is SectionLoaded) Section(
-                                        title: state.sections[5].title,
-                                        description:
-                                            state.sections[5].description,
-                                        tags: state.sections[5].tags,
-                                      ) else state is SectionError
-                                      ? Text(state.message)
-                                      : PhantomProgressIndicator(
-                                        size: size,
-                                        boxWidth: 0.45,
-                                      ),
+                                  if (state is SectionLoaded)
+                                    Section(
+                                      title: state.sections[3].title,
+                                      description:
+                                          state.sections[3].description,
+                                    )
+                                  else
+                                    state is SectionError
+                                        ? Text(state.message)
+                                        : PhantomProgressIndicator(
+                                            size: size,
+                                            boxWidth: 0.45,
+                                          ),
+                                  if (state is SectionLoaded)
+                                    Section(
+                                      title: state.sections[4].title,
+                                      description:
+                                          state.sections[4].description,
+                                    )
+                                  else
+                                    state is SectionError
+                                        ? Text(state.message)
+                                        : PhantomProgressIndicator(
+                                            size: size,
+                                            boxWidth: 0.45,
+                                          ),
+                                  if (state is SectionLoaded)
+                                    Section(
+                                      title: state.sections[5].title,
+                                      description:
+                                          state.sections[5].description,
+                                      tags: state.sections[5].tags,
+                                    )
+                                  else
+                                    state is SectionError
+                                        ? Text(state.message)
+                                        : PhantomProgressIndicator(
+                                            size: size,
+                                            boxWidth: 0.45,
+                                          ),
                                 ],
                               ),
                               Positioned(
@@ -141,23 +150,21 @@ class _AboutViewDesktopState extends State<AboutViewDesktop> {
                         right: size.height * 0.01,
                         top: size.height * 0.01,
                       ),
-                      child:
-                          state is SectionLoaded
-                              ? Section(
-                                title: state.sections[0].title,
-                                description: state.sections[0].description,
-                              )
-                              : state is SectionError
+                      child: state is SectionLoaded
+                          ? Section(
+                              title: state.sections[0].title,
+                              description: state.sections[0].description,
+                            )
+                          : state is SectionError
                               ? Text(state.message)
                               : PhantomProgressIndicator(
-                                size: size,
-                                boxWidth: 0.45,
-                              ),
+                                  size: size,
+                                  boxWidth: 0.45,
+                                ),
                     ),
                   ],
                 ),
               ),
-          
               Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
@@ -165,44 +172,42 @@ class _AboutViewDesktopState extends State<AboutViewDesktop> {
                     color: Colors.transparent,
                     width: size.width * 0.25,
                     margin: EdgeInsets.only(bottom: size.height * 0.01),
-                    child:
-                        state is SectionLoaded
-                            ? Section(
-                              title: state.sections[1].title,
-                              subtitle: state.sections[1].subtitle,
-                              where: state.sections[1].where,
-                              date: state.sections[1].date,
-                              carrouselHeight: size.width * 0.04,
-                              description: state.sections[1].description,
-                              tags: state.sections[1].tags,
-                            )
-                            : state is SectionError
+                    child: state is SectionLoaded
+                        ? Section(
+                            title: state.sections[1].title,
+                            subtitle: state.sections[1].subtitle,
+                            where: state.sections[1].where,
+                            date: state.sections[1].date,
+                            carrouselHeight: size.width * 0.04,
+                            description: state.sections[1].description,
+                            tags: state.sections[1].tags,
+                          )
+                        : state is SectionError
                             ? Text(state.message)
                             : PhantomProgressIndicator(
-                              size: size,
-                              boxWidth: 0.45,
-                            ),
+                                size: size,
+                                boxWidth: 0.45,
+                              ),
                   ),
                   Container(
                     color: Colors.transparent,
                     width: size.width * 0.25,
-                    child:
-                        state is SectionLoaded
-                            ? Section(
-                              title: state.sections[2].title,
-                              subtitle: state.sections[2].subtitle,
-                              where: state.sections[2].where,
-                              date: state.sections[2].date,
-                              carrouselHeight: size.width * 0.06,
-                              description: state.sections[2].description,
-                              tags: state.sections[2].tags,
-                            )
-                            : state is SectionError
+                    child: state is SectionLoaded
+                        ? Section(
+                            title: state.sections[2].title,
+                            subtitle: state.sections[2].subtitle,
+                            where: state.sections[2].where,
+                            date: state.sections[2].date,
+                            carrouselHeight: size.width * 0.06,
+                            description: state.sections[2].description,
+                            tags: state.sections[2].tags,
+                          )
+                        : state is SectionError
                             ? Text(state.message)
                             : PhantomProgressIndicator(
-                              size: size,
-                              boxWidth: 0.45,
-                            ),
+                                size: size,
+                                boxWidth: 0.45,
+                              ),
                   ),
                 ],
               ),
@@ -215,9 +220,10 @@ class _AboutViewDesktopState extends State<AboutViewDesktop> {
 }
 
 class DotIndicator extends StatelessWidget {
-
   const DotIndicator({
-    required this.currentIndex, required this.dotCount, super.key,
+    required this.currentIndex,
+    required this.dotCount,
+    super.key,
   });
   final int currentIndex;
   final int dotCount;
@@ -232,14 +238,17 @@ class DotIndicator extends StatelessWidget {
         return AnimatedContainer(
           duration: const Duration(milliseconds: 400),
           margin: const EdgeInsets.symmetric(horizontal: 4),
-          width: (currentIndex == index) ? ( size.width * 0.008) : (size.width * 0.006),
-          height: (currentIndex == index) ? ( size.width * 0.008) : (size.width * 0.006),
+          width: (currentIndex == index)
+              ? (size.width * 0.008)
+              : (size.width * 0.006),
+          height: (currentIndex == index)
+              ? (size.width * 0.008)
+              : (size.width * 0.006),
           decoration: BoxDecoration(
             shape: BoxShape.circle,
-            color:
-                (currentIndex == index)
-                    ? Theme.of(context).colorScheme.primary
-                    : Colors.grey,
+            color: (currentIndex == index)
+                ? Theme.of(context).colorScheme.primary
+                : Colors.grey,
           ),
         );
       }),
@@ -248,9 +257,10 @@ class DotIndicator extends StatelessWidget {
 }
 
 class PhantomProgressIndicator extends StatelessWidget {
-
   const PhantomProgressIndicator({
-    required this.size, required this.boxWidth, super.key,
+    required this.size,
+    required this.boxWidth,
+    super.key,
   });
   final Size size;
   final double boxWidth;

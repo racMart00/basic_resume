@@ -1,6 +1,6 @@
 import 'package:basic_resume/domain/domain.dart';
 
-abstract class SectionsDatasources {
+mixin SectionsDatasources {
   
   Future<List<SectionEntity>> getSections();
 

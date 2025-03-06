@@ -41,7 +41,8 @@ class _AboutViewMobileState extends State<AboutViewMobile> {
                         autoPlay: true,
                         autoPlayInterval: const Duration(seconds: 10),
                         autoPlayCurve: Curves.easeIn,
-                        autoPlayAnimationDuration: const Duration(milliseconds: 500),
+                        autoPlayAnimationDuration:
+                            const Duration(milliseconds: 500),
                         viewportFraction: 1,
                         disableCenter: true,
                         // height: size.width * 0.22,
@@ -52,34 +53,43 @@ class _AboutViewMobileState extends State<AboutViewMobile> {
                         },
                       ),
                       items: [
-                        if (state is SectionLoaded) Section(
-                              title: state.sections[3].title,
-                              description: state.sections[3].description,
-                            ) else state is SectionError
-                            ? Text(state.message)
-                            : PhantomProgressIndicator(
-                              size: size,
-                              boxWidth: 0.45,
-                            ),
-                        if (state is SectionLoaded) Section(
-                              title: state.sections[4].title,
-                              description: state.sections[4].description,
-                            ) else state is SectionError
-                            ? Text(state.message)
-                            : PhantomProgressIndicator(
-                              size: size,
-                              boxWidth: 0.45,
-                            ),
-                        if (state is SectionLoaded) Section(
-                              title: state.sections[5].title,
-                              description: state.sections[5].description,
-                              tags: state.sections[5].tags,
-                            ) else state is SectionError
-                            ? Text(state.message)
-                            : PhantomProgressIndicator(
-                              size: size,
-                              boxWidth: 0.45,
-                            ),
+                        if (state is SectionLoaded)
+                          Section(
+                            title: state.sections[3].title,
+                            description: state.sections[3].description,
+                          )
+                        else
+                          state is SectionError
+                              ? Text(state.message)
+                              : PhantomProgressIndicator(
+                                  size: size,
+                                  boxWidth: 0.45,
+                                ),
+                        if (state is SectionLoaded)
+                          Section(
+                            title: state.sections[4].title,
+                            description: state.sections[4].description,
+                          )
+                        else
+                          state is SectionError
+                              ? Text(state.message)
+                              : PhantomProgressIndicator(
+                                  size: size,
+                                  boxWidth: 0.45,
+                                ),
+                        if (state is SectionLoaded)
+                          Section(
+                            title: state.sections[5].title,
+                            description: state.sections[5].description,
+                            tags: state.sections[5].tags,
+                          )
+                        else
+                          state is SectionError
+                              ? Text(state.message)
+                              : PhantomProgressIndicator(
+                                  size: size,
+                                  boxWidth: 0.45,
+                                ),
                       ],
                     ),
                     Positioned(

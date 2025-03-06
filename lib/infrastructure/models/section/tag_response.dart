@@ -9,8 +9,8 @@ class TagResponse {
 
   factory TagResponse.fromJson(Map<String, dynamic> json) {
     return TagResponse(
-      icon: json['icon'],
-      color: _colorFromString(json['color']),
+      icon: json['icon'] as String,
+      color: _colorFromString(json['color'] as String),
     );
   }
   final String icon;

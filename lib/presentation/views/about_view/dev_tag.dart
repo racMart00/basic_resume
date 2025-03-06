@@ -2,13 +2,12 @@ import 'package:basic_resume/presentation/presentation.dart';
 import 'package:flutter/material.dart';
 
 class TagIcon extends StatelessWidget {
-
   const TagIcon({
-    super.key,
     required this.tagTitle,
     required this.tagColor,
     required this.svgDir,
     required this.svgTitle,
+    super.key,
   });
   final String tagTitle;
   final Color tagColor;
@@ -32,11 +31,16 @@ class TagIcon extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(tagTitle, style: TextStyle(
-            fontSize: Theme.of(context).textTheme.bodyMedium?.fontSize,
-            color: Colors.white,
-          ),),
-          SizedBox(width: size.width * 0.006,),
+          Text(
+            tagTitle,
+            style: TextStyle(
+              fontSize: Theme.of(context).textTheme.bodyMedium?.fontSize,
+              color: Colors.white,
+            ),
+          ),
+          SizedBox(
+            width: size.width * 0.006,
+          ),
           DevIcon(svgDir: svgDir, svgTitle: svgTitle),
         ],
       ),

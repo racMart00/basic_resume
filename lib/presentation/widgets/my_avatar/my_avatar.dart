@@ -12,14 +12,14 @@ class MyAvatar extends StatelessWidget {
       builder: (context, sizingInformation) {
         var boxSize = size.width * 1.25;
 
-        switch (sizingInformation.deviceScreenType) {
-          case DeviceScreenType.desktop:
-            boxSize = size.width * 0.3;
-          case DeviceScreenType.tablet:
-            boxSize = size.width * 0.35;
-          case DeviceScreenType.mobile:
-            boxSize = size.width * 0.55;
-          default:
+        if (sizingInformation.deviceScreenType case DeviceScreenType.desktop) {
+          boxSize = size.width * 0.3;
+        } else if (sizingInformation.deviceScreenType
+            case DeviceScreenType.tablet) {
+          boxSize = size.width * 0.35;
+        } else if (sizingInformation.deviceScreenType
+            case DeviceScreenType.mobile) {
+          boxSize = size.width * 0.55;
         }
 
         return Stack(

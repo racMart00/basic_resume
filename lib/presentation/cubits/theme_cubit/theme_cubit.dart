@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 // Estado del Cubit
 class ThemeState {
-
   ThemeState(this.themeMode);
   final ThemeMode themeMode;
 }
@@ -14,7 +13,8 @@ class ThemeCubit extends Cubit<ThemeState> {
 
   // Método para alternar el tema
   void toggleTheme() {
-    final newMode = state.themeMode == ThemeMode.dark ? ThemeMode.light : ThemeMode.dark;
+    final newMode =
+        state.themeMode == ThemeMode.dark ? ThemeMode.light : ThemeMode.dark;
     emit(ThemeState(newMode));
   }
 }

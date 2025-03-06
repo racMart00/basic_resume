@@ -1,4 +1,4 @@
-import 'dart:developer';
+// import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
@@ -10,79 +10,65 @@ TextStyle? getSectionTextStyle(
 ) {
   TextStyle? textStyle;
 
-  log(sectionName);
+  // log(sectionName);
 
   switch (sectionName) {
     case 'title':
-      switch (sizingInformation.deviceScreenType) {
-        case DeviceScreenType.desktop:
-          textStyle = Theme.of(context).textTheme.titleSmall;
-        case DeviceScreenType.tablet:
-          textStyle = Theme.of(context).textTheme.titleMedium;
-        case DeviceScreenType.mobile:
-        default:
-          textStyle = Theme.of(context).textTheme.titleLarge;
-      }
+      if (sizingInformation.deviceScreenType case DeviceScreenType.desktop) {
+        textStyle = Theme.of(context).textTheme.titleSmall;
+      } else if (sizingInformation.deviceScreenType
+          case DeviceScreenType.tablet) {
+        textStyle = Theme.of(context).textTheme.titleMedium;
+      } else if (sizingInformation.deviceScreenType
+          case DeviceScreenType.mobile) {}
     case 'subtitle':
-      switch (sizingInformation.deviceScreenType) {
-        case DeviceScreenType.desktop:
-          textStyle = Theme.of(context).textTheme.bodyLarge;
-        case DeviceScreenType.tablet:
-          textStyle = Theme.of(context).textTheme.bodyLarge;
-        case DeviceScreenType.mobile:
-        default:
-          textStyle = Theme.of(context).textTheme.bodyLarge;
-      }
+      if (sizingInformation.deviceScreenType case DeviceScreenType.desktop) {
+        textStyle = Theme.of(context).textTheme.bodyLarge;
+      } else if (sizingInformation.deviceScreenType
+          case DeviceScreenType.tablet) {
+        textStyle = Theme.of(context).textTheme.bodyLarge;
+      } else if (sizingInformation.deviceScreenType
+          case DeviceScreenType.mobile) {}
     case 'where':
-      switch (sizingInformation.deviceScreenType) {
-        case DeviceScreenType.desktop:
-          textStyle = Theme.of(context).textTheme.bodySmall;
-        case DeviceScreenType.tablet:
-          textStyle = Theme.of(context).textTheme.bodySmall;
-        case DeviceScreenType.mobile:
-        default:
-          textStyle = Theme.of(context).textTheme.bodySmall;
-      }
+      if (sizingInformation.deviceScreenType case DeviceScreenType.desktop) {
+        textStyle = Theme.of(context).textTheme.bodySmall;
+      } else if (sizingInformation.deviceScreenType
+          case DeviceScreenType.tablet) {
+        textStyle = Theme.of(context).textTheme.bodySmall;
+      } else if (sizingInformation.deviceScreenType
+          case DeviceScreenType.mobile) {}
     case 'date':
-      switch (sizingInformation.deviceScreenType) {
-        case DeviceScreenType.desktop:
-          textStyle = Theme.of(context).textTheme.bodySmall;
-        case DeviceScreenType.tablet:
-          textStyle = Theme.of(context).textTheme.bodySmall;
-        case DeviceScreenType.mobile:
-        default:
-          textStyle = Theme.of(context).textTheme.bodySmall;
-      }
+      if (sizingInformation.deviceScreenType case DeviceScreenType.desktop) {
+        textStyle = Theme.of(context).textTheme.bodySmall;
+      } else if (sizingInformation.deviceScreenType
+          case DeviceScreenType.tablet) {
+        textStyle = Theme.of(context).textTheme.bodySmall;
+      } else if (sizingInformation.deviceScreenType
+          case DeviceScreenType.mobile) {}
     case 'description':
-      switch (sizingInformation.deviceScreenType) {
-        case DeviceScreenType.desktop:
-          textStyle = Theme.of(context).textTheme.bodySmall;
-        case DeviceScreenType.tablet:
-          textStyle = Theme.of(context).textTheme.bodyMedium;
-        case DeviceScreenType.mobile:
-        default:
-          textStyle = Theme.of(context).textTheme.bodyLarge;
-      }
+      if (sizingInformation.deviceScreenType case DeviceScreenType.desktop) {
+        textStyle = Theme.of(context).textTheme.bodySmall;
+      } else if (sizingInformation.deviceScreenType
+          case DeviceScreenType.tablet) {
+        textStyle = Theme.of(context).textTheme.bodyMedium;
+      } else if (sizingInformation.deviceScreenType
+          case DeviceScreenType.mobile) {}
     case 'tags':
-      switch (sizingInformation.deviceScreenType) {
-        case DeviceScreenType.desktop:
-          textStyle = Theme.of(context).textTheme.bodySmall;
-        case DeviceScreenType.tablet:
-          textStyle = Theme.of(context).textTheme.bodySmall;
-        case DeviceScreenType.mobile:
-        default:
-          textStyle = Theme.of(context).textTheme.bodySmall;
-      }
+      if (sizingInformation.deviceScreenType case DeviceScreenType.desktop) {
+        textStyle = Theme.of(context).textTheme.bodySmall;
+      } else if (sizingInformation.deviceScreenType
+          case DeviceScreenType.tablet) {
+        textStyle = Theme.of(context).textTheme.bodySmall;
+      } else if (sizingInformation.deviceScreenType
+          case DeviceScreenType.mobile) {}
     default:
-      switch (sizingInformation.deviceScreenType) {
-        case DeviceScreenType.desktop:
-          textStyle = Theme.of(context).textTheme.bodySmall;
-        case DeviceScreenType.tablet:
-          textStyle = Theme.of(context).textTheme.bodySmall;
-        case DeviceScreenType.mobile:
-        default:
-          textStyle = Theme.of(context).textTheme.bodySmall;
-      }
+      if (sizingInformation.deviceScreenType case DeviceScreenType.desktop) {
+        textStyle = Theme.of(context).textTheme.bodySmall;
+      } else if (sizingInformation.deviceScreenType
+          case DeviceScreenType.tablet) {
+        textStyle = Theme.of(context).textTheme.bodySmall;
+      } else if (sizingInformation.deviceScreenType
+          case DeviceScreenType.mobile) {}
   }
 
   return textStyle;

@@ -5,10 +5,7 @@ import 'package:flutter/material.dart';
 class DrawerItem extends StatelessWidget {
 
   const DrawerItem({
-    super.key,
-    required this.title,
-    required this.icon,
-    required this.path,
+    required this.title, required this.icon, required this.path, super.key,
   });
   final String title;
   final IconData icon;

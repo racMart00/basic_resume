@@ -1,10 +1,10 @@
 import 'package:basic_resume/domain/domain.dart';
 
-class SectionRepositoryImpl extends SectionsRepositories {
-  
-  final SectionsDatasources datasources;
+class SectionRepositoryImpl with SectionsRepositories {
 
   SectionRepositoryImpl(this.datasources);
+  
+  final SectionsDatasources datasources;
 
   @override
   Future<List<SectionEntity>> getSections() {

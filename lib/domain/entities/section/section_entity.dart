@@ -1,10 +1,10 @@
 import 'package:basic_resume/domain/domain.dart';
 
 class SectionEntity {
-
   SectionEntity({
     required this.title,
-    required this.description, this.subtitle,
+    required this.description,
+    this.subtitle,
     this.where,
     this.date,
     this.tags,
@@ -12,13 +12,15 @@ class SectionEntity {
 
   factory SectionEntity.fromJson(Map<String, dynamic> json) {
     return SectionEntity(
-      title: json['title'],
-      subtitle: json['subtitle'],
-      where: json['where'],
-      date: json['date'],
+      title: json['title'].toString(),
+      subtitle: json['subtitle'].toString(),
+      where: json['where'].toString(),
+      date: json['date'].toString(),
       description: json['description'],
-      tags: (json['tags'] as Map<String, dynamic>?)?.map((key, value) =>
-          MapEntry(key, TagEntity.fromJson(value)),),
+      tags: (json['tags'] as Map<String, dynamic>?)?.map(
+        (key, value) =>
+            MapEntry(key, TagEntity.fromJson(value as Map<String, dynamic>)),
+      ),
     );
   }
   final String title;

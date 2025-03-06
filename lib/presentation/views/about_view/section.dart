@@ -5,15 +5,14 @@ import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 class Section extends StatefulWidget {
-
   const Section({
-    super.key,
     required this.title,
+    required this.description,
+    super.key,
     this.subtitle,
     this.where,
     this.date,
     this.carrouselHeight,
-    required this.description,
     this.tags,
   });
   final String title;
@@ -43,7 +42,14 @@ class _SectionState extends State<Section> {
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(widget.title, style: getSectionTextStyle(widget.title, sizingInformation, context)),
+            Text(
+              widget.title,
+              style: getSectionTextStyle(
+                widget.title,
+                sizingInformation,
+                context,
+              ),
+            ),
             const Divider(),
             if (widget.subtitle != null) ...[
               Text(
@@ -77,7 +83,8 @@ class _SectionState extends State<Section> {
                         autoPlay: true,
                         autoPlayInterval: const Duration(seconds: 5),
                         autoPlayCurve: Curves.easeIn,
-                        autoPlayAnimationDuration: const Duration(milliseconds: 500),
+                        autoPlayAnimationDuration:
+                            const Duration(milliseconds: 500),
                         viewportFraction: 1,
                         disableCenter: true,
                         height: widget.carrouselHeight,
@@ -87,26 +94,24 @@ class _SectionState extends State<Section> {
                           });
                         },
                       ),
-                      items:
-                          (widget.description as List<String>).map((desc) {
-                            return Builder(
-                              builder: (BuildContext context) {
-                                return Container(
-                                  width: size.width,
-                                  padding: EdgeInsets.only(
-                                    right: size.height * 0.06,
-                                  ),
-                                  color: Colors.transparent,
-                                  child: Text(
-                                    desc,
-                                    style:
-                                        Theme.of(context).textTheme.bodyMedium,
-                                    textAlign: TextAlign.start,
-                                  ),
-                                );
-                              },
+                      items: (widget.description as List<String>).map((desc) {
+                        return Builder(
+                          builder: (BuildContext context) {
+                            return Container(
+                              width: size.width,
+                              padding: EdgeInsets.only(
+                                right: size.height * 0.06,
+                              ),
+                              color: Colors.transparent,
+                              child: Text(
+                                desc,
+                                style: Theme.of(context).textTheme.bodyMedium,
+                                textAlign: TextAlign.start,
+                              ),
                             );
-                          }).toList(),
+                          },
+                        );
+                      }).toList(),
                     ),
                     Positioned(
                       right: 0,
@@ -125,19 +130,18 @@ class _SectionState extends State<Section> {
               ] else
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children:
-                      (widget.description as List<String>).map((desc) {
-                        return Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              ' - $desc',
-                              style: Theme.of(context).textTheme.bodyMedium,
-                            ),
-                            SizedBox(height: size.height * 0.0025),
-                          ],
-                        );
-                      }).toList(),
+                  children: (widget.description as List<String>).map((desc) {
+                    return Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          ' - $desc',
+                          style: Theme.of(context).textTheme.bodyMedium,
+                        ),
+                        SizedBox(height: size.height * 0.0025),
+                      ],
+                    );
+                  }).toList(),
                 ),
             ],
             SizedBox(height: size.height * 0.005),
@@ -145,15 +149,14 @@ class _SectionState extends State<Section> {
               Wrap(
                 spacing: 8,
                 runSpacing: 4,
-                children:
-                    widget.tags!.entries.map((entry) {
-                      return TagIcon(
-                        tagTitle: entry.key,
-                        tagColor: entry.value.color,
-                        svgDir: entry.value.icon,
-                        svgTitle: entry.key,
-                      );
-                    }).toList(),
+                children: widget.tags!.entries.map((entry) {
+                  return TagIcon(
+                    tagTitle: entry.key,
+                    tagColor: entry.value.color,
+                    svgDir: entry.value.icon,
+                    svgTitle: entry.key,
+                  );
+                }).toList(),
               ),
             ],
           ],
