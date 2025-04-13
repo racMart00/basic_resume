@@ -1,0 +1,22 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Basic Resume Debug",
+        "type": "dart",
+        "request": "launch",
+        "deviceId": "chrome",
+        "program": "lib/main.dart",
+        "flutterMode": "debug"
+      },
+      {
+        "name": "Basic Resume Release",
+        "type": "dart",
+        "request": "launch",
+        "deviceId": "chrome",
+        "program": "lib/main.dart",
+        "flutterMode": "release"
+      }
+    ]
+  }  
+  

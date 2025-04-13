@@ -3,10 +3,9 @@ import 'package:basic_resume/infrastructure/infrastructure.dart';
 class SectionsResponse {
   SectionsResponse({
     required this.title,
-    this.subtitle,
+    required this.description, this.subtitle,
     this.where,
     this.date,
-    required this.description,
     this.tags,
   });
 

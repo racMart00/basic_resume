@@ -1,4 +1,6 @@
+import 'dart:io';
 import 'package:basic_resume/presentation/presentation.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -7,12 +9,18 @@ class NavBarDrawerHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final topSafeAreaPadding = MediaQuery.of(context).padding.top;
+    final isAndroid = !kIsWeb && Platform.isAndroid;
+
+    //TODO: Improve responsive text here
     return Stack(
       children: [
         Container(
-          height: 150,
+          height: isAndroid ? topSafeAreaPadding + 150 : 150,
           color: Colors.green.shade600,
           alignment: Alignment.center,
+          padding:
+              EdgeInsets.only(top: isAndroid ? topSafeAreaPadding : 1),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
@@ -36,7 +44,9 @@ class NavBarDrawerHeader extends StatelessWidget {
           ),
         ),
         Positioned(
-          top: 8, // Ajusta la posición vertical
+          top: isAndroid
+              ? topSafeAreaPadding + 8
+              : 8, // Ajusta la posición vertical
           right: 8, // Ajusta la posición horizontal
           child: IconButton(
             icon: Icon(

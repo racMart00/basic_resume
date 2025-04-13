@@ -6,16 +6,19 @@ class NavBarDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+
     return Container(
       width: 250,
       decoration: BoxDecoration(
         boxShadow: [BoxShadow(color: Theme.of(context).colorScheme.surface)],
       ),
-      child: const Column(
+      child: Column(
         children: [
-          NavBarDrawerHeader(),
-          DrawerItem(title: 'Home', icon: Icons.home_filled, path: '/0',),
-          DrawerItem(title: 'About', icon: Icons.account_circle_rounded, path: '/1'),
+          const NavBarDrawerHeader(),
+          SizedBox(height: size.height * 0.02,),
+          const DrawerItem(title: 'Home', icon: Icons.home_filled, path: '/0',),
+          const DrawerItem(title: 'About', icon: Icons.account_circle_rounded, path: '/1'),
         ],
       ),
     );

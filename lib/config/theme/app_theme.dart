@@ -15,6 +15,7 @@ class AppTheme {
     SizingInformation sizingInformation,
     Brightness brightness,
   ) {
+
     double calculateDisplaySize(double baseSize) {
       if (sizingInformation.deviceScreenType == DeviceScreenType.desktop) {
         return size.width * (baseSize + 0.004);
