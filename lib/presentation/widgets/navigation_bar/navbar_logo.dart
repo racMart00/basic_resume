@@ -11,6 +11,7 @@ class NavBarLogo extends StatelessWidget {
       height: size.width * 0.08,
       child: Row(
         children: [
+          //TODO: logo
           Text('racMart', style: Theme.of(context).textTheme.displayMedium),
         ],
       ),

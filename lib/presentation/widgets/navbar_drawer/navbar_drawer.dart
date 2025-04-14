@@ -16,9 +16,22 @@ class NavBarDrawer extends StatelessWidget {
       child: Column(
         children: [
           const NavBarDrawerHeader(),
-          SizedBox(height: size.height * 0.02,),
-          const DrawerItem(title: 'Home', icon: Icons.home_filled, path: '/0',),
-          const DrawerItem(title: 'About', icon: Icons.account_circle_rounded, path: '/1'),
+          SizedBox(
+            height: size.height * 0.01,
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(
+                horizontal: size.height * 0.008, vertical: size.width * 0.004,),
+            child: const Column(
+              children: [
+                NavBarItem(
+                  title: 'Home',
+                  icon: Icons.home_filled,
+                  path: '/0',
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );

@@ -46,7 +46,7 @@ class CourseDetails extends StatelessWidget {
                   SizedBox(height: spacing),
                   Text(
                     'Front-End Developer',
-                    style: Theme.of(context).textTheme.displaySmall,
+                    style: Theme.of(context).textTheme.labelLarge,
                   ),
                   SizedBox(height: spacing),
                   Text(

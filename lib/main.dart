@@ -19,11 +19,12 @@ void main() {
       SystemUiMode.manual,
       overlays: [SystemUiOverlay.top],
     );
-    
+
+    if (kDebugMode) {
+      WakelockPlus.enable();
+    }
   }
-  if (kDebugMode) {
-    WakelockPlus.enable();
-  }
+
   runApp(const MyApp());
 }
 
