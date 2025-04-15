@@ -21,24 +21,16 @@ class NavBarDrawerHeader extends StatelessWidget {
           alignment: Alignment.center,
           padding:
               EdgeInsets.only(top: isAndroid ? topSafeAreaPadding : 1),
-          child: const Column(
+          child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
               Text(
-                'SKILL UP NOW',
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.w800,
-                  color: Colors.white,
-                ),
+                "Hi! I'm_racMart",
+                style: Theme.of(context).textTheme.displayLarge,
               ),
               Text(
-                'TAP HERE',
-                style: TextStyle(
-                  fontSize: 12,
-                  fontWeight: FontWeight.w600,
-                  color: Colors.white,
-                ),
+                'Front-End Developer',
+                style: Theme.of(context).textTheme.titleMedium,
               ),
             ],
           ),
