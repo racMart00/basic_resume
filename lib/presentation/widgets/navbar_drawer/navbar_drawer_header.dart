@@ -21,7 +21,7 @@ class NavBarDrawerHeader extends StatelessWidget {
           alignment: Alignment.center,
           padding:
               EdgeInsets.only(top: isAndroid ? topSafeAreaPadding : 1),
-          child: Column(
+          child: const Column(
             mainAxisSize: MainAxisSize.min,
             children: [
               Text(
@@ -29,7 +29,7 @@ class NavBarDrawerHeader extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.w800,
-                  color: Theme.of(context).colorScheme.inverseSurface,
+                  color: Colors.white,
                 ),
               ),
               Text(
@@ -37,7 +37,7 @@ class NavBarDrawerHeader extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 12,
                   fontWeight: FontWeight.w600,
-                  color: Theme.of(context).colorScheme.inverseSurface,
+                  color: Colors.white,
                 ),
               ),
             ],
@@ -50,7 +50,8 @@ class NavBarDrawerHeader extends StatelessWidget {
           right: 8, // Ajusta la posición horizontal
           child: IconButton(
             icon: Icon(
-              context.read<ThemeCubit>().state.themeMode == ThemeMode.dark
+              color: Colors.white,
+              context.watch<ThemeCubit>().state.themeMode == ThemeMode.dark
                   ? Icons.light_mode
                   : Icons.dark_mode,
             ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:go_router/go_router.dart';
 
 class CallToAction extends StatelessWidget {
   const CallToAction({super.key});
@@ -15,7 +16,9 @@ class CallToAction extends StatelessWidget {
           title: 'My Work',
           color: Theme.of(context).colorScheme.inverseSurface,
           textColor: Theme.of(context).colorScheme.surface,
-          onPressed: () {},
+          onPressed: () {
+            context.go('/2');
+          },
         ),
       ],
     );
@@ -80,7 +83,7 @@ class _HireMeButtonState extends State<_HireMeButton> {
                           SnackBar(
                             backgroundColor: Colors.transparent,
                             content: Text(
-                              'Correo copiado al portapapeles',
+                              'Email copied to clipboard',
                               style: Theme.of(context).textTheme.displayMedium,
                             ),
                           ),

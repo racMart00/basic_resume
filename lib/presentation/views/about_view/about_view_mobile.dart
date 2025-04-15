@@ -30,22 +30,90 @@ class _AboutViewMobileState extends State<AboutViewMobile> {
         return SingleChildScrollView(
           child: Column(
             children: [
+              SizedBox(height: size.height * 0.01),
+              Container(
+                decoration: BoxDecoration(
+                  color: Colors.transparent,
+                  borderRadius: BorderRadius.circular(16),
+                ),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(16),
+                  child: Image.asset(
+                    'assets/images/banner.png',
+                    fit: BoxFit.fill,
+                    alignment: Alignment.topLeft,
+                  ),
+                ),
+              ),
+              SizedBox(height: size.height * 0.01),
+              SizedBox(
+                child: state is SectionLoaded
+                    ? Section(
+                        title: state.sections[0].title,
+                        description: state.sections[0].description,
+                      )
+                    : state is SectionError
+                        ? Text(state.message)
+                        : PhantomProgressIndicator(
+                            size: size,
+                            boxWidth: 0.45,
+                          ),
+              ),
+              SizedBox(height: size.height * 0.01),
+              SizedBox(
+                child: state is SectionLoaded
+                    ? Section(
+                        title: state.sections[1].title,
+                        subtitle: state.sections[1].subtitle,
+                        where: state.sections[1].where,
+                        date: state.sections[1].date,
+                        carrouselHeight: size.width * 0.125,
+                        description: state.sections[1].description,
+                        tags: state.sections[1].tags,
+                      )
+                    : state is SectionError
+                        ? Text(state.message)
+                        : PhantomProgressIndicator(
+                            size: size,
+                            boxWidth: 0.45,
+                          ),
+              ),
+              SizedBox(height: size.height * 0.02),
+              SizedBox(
+                child: state is SectionLoaded
+                    ? Section(
+                        title: state.sections[2].title,
+                        subtitle: state.sections[2].subtitle,
+                        where: state.sections[2].where,
+                        date: state.sections[2].date,
+                        carrouselHeight: size.width * 0.225,
+                        description: state.sections[2].description,
+                        tags: state.sections[2].tags,
+                      )
+                    : state is SectionError
+                        ? Text(state.message)
+                        : PhantomProgressIndicator(
+                            size: size,
+                            boxWidth: 0.45,
+                          ),
+              ),
+              SizedBox(height: size.height * 0.02),
               SizedBox(
                 width: size.width,
-                height: size.height * 0.4,
+                height: size.height * 0.25,
                 child: Stack(
                   children: [
                     CarouselSlider(
                       carouselController: carouselController,
                       options: CarouselOptions(
                         autoPlay: true,
-                        autoPlayInterval: const Duration(seconds: 10),
+                        autoPlayInterval: const Duration(seconds: 30),
                         autoPlayCurve: Curves.easeIn,
                         autoPlayAnimationDuration:
                             const Duration(milliseconds: 500),
                         viewportFraction: 1,
                         disableCenter: true,
-                        // height: size.width * 0.22,
+                        height: size.height * 0.25,
                         onPageChanged: (index, reason) {
                           setState(() {
                             currentIndex = index;
@@ -97,7 +165,7 @@ class _AboutViewMobileState extends State<AboutViewMobile> {
                       top: 0,
                       child: Container(
                         color: Theme.of(context).scaffoldBackgroundColor,
-                        height: size.height * 0.04,
+                        height: size.height * 0.03,
                         child: DotIndicator(
                           currentIndex: currentIndex,
                           dotCount: 3,
@@ -108,19 +176,6 @@ class _AboutViewMobileState extends State<AboutViewMobile> {
                 ),
               ),
               SizedBox(height: size.height * 0.01),
-              Container(
-                color: Colors.green.shade400,
-                width: size.width,
-                height: size.height * 0.4,
-                child: const Center(child: Text('Section 2')),
-              ),
-              SizedBox(height: size.height * 0.01),
-              Container(
-                color: Colors.green.shade400,
-                width: size.width,
-                height: size.height * 0.4,
-                child: const Center(child: Text('Section 3')),
-              ),
             ],
           ),
         );

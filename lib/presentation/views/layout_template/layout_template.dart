@@ -9,11 +9,13 @@ class LayoutTemplate extends StatelessWidget {
   const LayoutTemplate({required this.pageIndex, super.key});
   final int pageIndex;
 
-  List<Widget> get viewRoutes => const [HomeView(), AboutView()];
+  List<Widget> get viewRoutes =>
+      const [HomeViewLayout(), AboutViewLayout(), ProjectsViewLayout()];
 
   @override
   Widget build(BuildContext context) {
     final topPadding = MediaQuery.of(context).padding.top;
+    final size = MediaQuery.of(context).size;
 
     final Widget mainContent = Padding(
       padding:
@@ -23,7 +25,12 @@ class LayoutTemplate extends StatelessWidget {
           children: [
             const CustomNavBar(),
             Expanded(
-              child: IndexedStack(index: pageIndex, children: viewRoutes),
+              child: Padding(
+                padding: EdgeInsets.symmetric(
+                  horizontal: size.width * 0.02,
+                ),
+                child: IndexedStack(index: pageIndex, children: viewRoutes),
+              ),
             ),
           ],
         ),

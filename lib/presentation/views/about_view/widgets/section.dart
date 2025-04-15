@@ -29,8 +29,13 @@ class Section extends StatefulWidget {
 
 class _SectionState extends State<Section> {
   int currentIndex = 0;
-  final CarouselSliderController carouselController =
-      CarouselSliderController();
+  late final CarouselSliderController carouselController;
+
+  @override
+  void initState() {
+    super.initState();
+    carouselController = CarouselSliderController();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -44,8 +49,8 @@ class _SectionState extends State<Section> {
           children: [
             Text(
               widget.title,
-              style: getSectionTextStyle(
-                widget.title,
+              style: getFontTextStyle(
+                'title',
                 sizingInformation,
                 context,
               ),
@@ -54,23 +59,45 @@ class _SectionState extends State<Section> {
             if (widget.subtitle != null) ...[
               Text(
                 widget.subtitle!,
-                style: Theme.of(context).textTheme.bodyLarge,
+                style: getFontTextStyle(
+                  'subtitle',
+                  sizingInformation,
+                  context,
+                ),
               ),
               SizedBox(height: size.height * 0.005),
             ],
             if (widget.where != null) ...[
-              Text(widget.where!, style: Theme.of(context).textTheme.bodySmall),
+              Text(
+                widget.where!,
+                style: getFontTextStyle(
+                  'where',
+                  sizingInformation,
+                  context,
+                ),
+              ),
               SizedBox(height: size.height * 0.005),
             ],
             if (widget.date != null) ...[
-              Text(widget.date!, style: Theme.of(context).textTheme.bodySmall),
+              Text(
+                widget.date!,
+                style: getFontTextStyle(
+                  'date',
+                  sizingInformation,
+                  context,
+                ),
+              ),
               SizedBox(height: size.height * 0.005),
             ],
             SizedBox(height: size.height * 0.005),
             if (widget.description is String) ...[
               Text(
                 widget.description as String,
-                style: Theme.of(context).textTheme.bodyMedium,
+                style: getFontTextStyle(
+                  'description',
+                  sizingInformation,
+                  context,
+                ),
                 textAlign: TextAlign.start,
               ),
             ] else if (widget.description is List<String>) ...[
@@ -81,7 +108,7 @@ class _SectionState extends State<Section> {
                       carouselController: carouselController,
                       options: CarouselOptions(
                         autoPlay: true,
-                        autoPlayInterval: const Duration(seconds: 5),
+                        autoPlayInterval: const Duration(seconds: 30),
                         autoPlayCurve: Curves.easeIn,
                         autoPlayAnimationDuration:
                             const Duration(milliseconds: 500),
@@ -105,7 +132,11 @@ class _SectionState extends State<Section> {
                               color: Colors.transparent,
                               child: Text(
                                 desc,
-                                style: Theme.of(context).textTheme.bodyMedium,
+                                style: getFontTextStyle(
+                                  'description',
+                                  sizingInformation,
+                                  context,
+                                ),
                                 textAlign: TextAlign.start,
                               ),
                             );
@@ -116,9 +147,10 @@ class _SectionState extends State<Section> {
                     Positioned(
                       right: 0,
                       top: 0,
-                      child: Container(
-                        color: Theme.of(context).scaffoldBackgroundColor,
-                        height: size.height * 0.03,
+                      child: ColoredBox(
+                        color: Theme.of(context)
+                            .scaffoldBackgroundColor
+                            .withOpacity(0.7),
                         child: DotIndicator(
                           currentIndex: currentIndex,
                           dotCount: (widget.description as List<String>).length,
@@ -127,31 +159,40 @@ class _SectionState extends State<Section> {
                     ),
                   ],
                 ),
-              ] else
+              ] else ...[
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: (widget.description as List<String>).map((desc) {
-                    return Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          ' - $desc',
-                          style: Theme.of(context).textTheme.bodyMedium,
+                    return Padding(
+                      padding: EdgeInsets.only(bottom: size.height * 0.0025),
+                      child: Text(
+                        ' - $desc',
+                        style: getFontTextStyle(
+                          'description',
+                          sizingInformation,
+                          context,
                         ),
-                        SizedBox(height: size.height * 0.0025),
-                      ],
+                      ),
                     );
                   }).toList(),
                 ),
+              ],
             ],
-            SizedBox(height: size.height * 0.005),
+            SizedBox(height: size.height * 0.01),
             if (widget.tags != null) ...[
               Wrap(
                 spacing: 8,
                 runSpacing: 4,
                 children: widget.tags!.entries.map((entry) {
                   return TagIcon(
-                    tagTitle: entry.key,
+                    tagTitle: Text(
+                      entry.key,
+                      style: getFontTextStyle(
+                        'tags',
+                        sizingInformation,
+                        context,
+                      ),
+                    ),
                     tagColor: entry.value.color,
                     svgDir: entry.value.icon,
                     svgTitle: entry.key,

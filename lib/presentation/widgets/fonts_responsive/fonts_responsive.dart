@@ -1,16 +1,12 @@
-// import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
-TextStyle? getSectionTextStyle(
+TextStyle? getFontTextStyle(
   String sectionName,
   SizingInformation sizingInformation,
   BuildContext context,
 ) {
   TextStyle? textStyle;
-
-  // log(sectionName);
 
   switch (sectionName) {
     case 'title':
@@ -19,56 +15,69 @@ TextStyle? getSectionTextStyle(
       } else if (sizingInformation.deviceScreenType
           case DeviceScreenType.tablet) {
         textStyle = Theme.of(context).textTheme.titleMedium;
-      } else if (sizingInformation.deviceScreenType
-          case DeviceScreenType.mobile) {}
+      } else {
+        textStyle = Theme.of(context).textTheme.displayMedium;
+      }
     case 'subtitle':
       if (sizingInformation.deviceScreenType case DeviceScreenType.desktop) {
         textStyle = Theme.of(context).textTheme.bodyLarge;
       } else if (sizingInformation.deviceScreenType
           case DeviceScreenType.tablet) {
         textStyle = Theme.of(context).textTheme.bodyLarge;
-      } else if (sizingInformation.deviceScreenType
-          case DeviceScreenType.mobile) {}
+      } else {
+        textStyle = Theme.of(context).textTheme.titleSmall;
+      }
     case 'where':
       if (sizingInformation.deviceScreenType case DeviceScreenType.desktop) {
         textStyle = Theme.of(context).textTheme.bodySmall;
       } else if (sizingInformation.deviceScreenType
           case DeviceScreenType.tablet) {
         textStyle = Theme.of(context).textTheme.bodySmall;
-      } else if (sizingInformation.deviceScreenType
-          case DeviceScreenType.mobile) {}
+      } else {
+        textStyle = Theme.of(context).textTheme.bodyLarge;
+      }
     case 'date':
       if (sizingInformation.deviceScreenType case DeviceScreenType.desktop) {
         textStyle = Theme.of(context).textTheme.bodySmall;
       } else if (sizingInformation.deviceScreenType
           case DeviceScreenType.tablet) {
         textStyle = Theme.of(context).textTheme.bodySmall;
-      } else if (sizingInformation.deviceScreenType
-          case DeviceScreenType.mobile) {}
+      } else {
+        textStyle = Theme.of(context).textTheme.bodyMedium;
+      }
     case 'description':
       if (sizingInformation.deviceScreenType case DeviceScreenType.desktop) {
         textStyle = Theme.of(context).textTheme.bodySmall;
       } else if (sizingInformation.deviceScreenType
           case DeviceScreenType.tablet) {
         textStyle = Theme.of(context).textTheme.bodyMedium;
-      } else if (sizingInformation.deviceScreenType
-          case DeviceScreenType.mobile) {}
+      } else {
+        textStyle = Theme.of(context).textTheme.displaySmall;
+      }
     case 'tags':
       if (sizingInformation.deviceScreenType case DeviceScreenType.desktop) {
         textStyle = Theme.of(context).textTheme.bodySmall;
       } else if (sizingInformation.deviceScreenType
           case DeviceScreenType.tablet) {
-        textStyle = Theme.of(context).textTheme.bodySmall;
-      } else if (sizingInformation.deviceScreenType
-          case DeviceScreenType.mobile) {}
+        textStyle = Theme.of(context).textTheme.bodyMedium;
+      } else {
+        final textTheme = Theme.of(context).textTheme.titleMedium!;
+        textStyle = TextStyle(
+          color: Colors.white,
+          fontFamily: textTheme.fontFamily,
+          fontStyle: textTheme.fontStyle,
+          fontSize: textTheme.fontSize,
+        );
+      }
     default:
       if (sizingInformation.deviceScreenType case DeviceScreenType.desktop) {
-        textStyle = Theme.of(context).textTheme.bodySmall;
+        textStyle = Theme.of(context).textTheme.displayLarge;
       } else if (sizingInformation.deviceScreenType
           case DeviceScreenType.tablet) {
-        textStyle = Theme.of(context).textTheme.bodySmall;
-      } else if (sizingInformation.deviceScreenType
-          case DeviceScreenType.mobile) {}
+        textStyle = Theme.of(context).textTheme.displayLarge;
+      } else {
+        textStyle = Theme.of(context).textTheme.displayLarge;
+      }
   }
 
   return textStyle;

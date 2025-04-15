@@ -1,8 +1,8 @@
 import 'package:basic_resume/presentation/presentation.dart';
 import 'package:flutter/material.dart';
 
-class HomeContentDesktop extends StatelessWidget {
-  const HomeContentDesktop({super.key});
+class HomeViewDesktop extends StatelessWidget {
+  const HomeViewDesktop({super.key});
 
   @override
   Widget build(BuildContext context) {

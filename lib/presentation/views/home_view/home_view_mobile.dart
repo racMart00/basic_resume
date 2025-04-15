@@ -1,8 +1,8 @@
 import 'package:basic_resume/presentation/presentation.dart';
 import 'package:flutter/material.dart';
 
-class HomeContentTablet extends StatelessWidget {
-  const HomeContentTablet({super.key});
+class HomeViewMobile extends StatelessWidget {
+  const HomeViewMobile({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -10,7 +10,6 @@ class HomeContentTablet extends StatelessWidget {
 
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const MyAvatar(),
         SizedBox(height: size.height * 0.01),

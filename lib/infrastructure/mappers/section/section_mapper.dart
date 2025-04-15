@@ -9,12 +9,7 @@ class SectionMapper {
         where: model.where,
         date: model.date,
         description: model.description,
-        tags: model.tags
-            ?.map((key, value) => MapEntry(key, tagModelToEntity(value))),
-      );
-
-  static TagEntity tagModelToEntity(TagResponse model) => TagEntity(
-        icon: model.icon,
-        color: model.color,
+        tags: model.tags?.map(
+            (key, value) => MapEntry(key, TagMapper.tagModelToEntity(value)),),
       );
 }

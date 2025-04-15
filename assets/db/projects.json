@@ -1,0 +1,37 @@
+{
+    "my_work": [
+        {
+            "img": "assets/images/banner.png",
+            "title": "Proyecto #1",
+            "description": "Development of videogames.",
+            "tags": {
+                "Roblox Studio": {
+                    "icon": "assets/icons/dev_icons/roblox.svg",
+                    "color": "255,244,67,54"
+                }
+            }
+        },
+        {
+            "img": "assets/images/banner.png",
+            "title": "Proyecto #1",
+            "description": "Development of videogames.",
+            "tags": {
+                "Roblox Studio": {
+                    "icon": "assets/icons/dev_icons/roblox.svg",
+                    "color": "255,244,67,54"
+                }
+            }
+        },
+        {
+            "img": "assets/images/banner.png",
+            "title": "Proyecto #1",
+            "description": "Development of videogames.",
+            "tags": {
+                "Roblox Studio": {
+                    "icon": "assets/icons/dev_icons/roblox.svg",
+                    "color": "255,244,67,54"
+                }
+            }
+        }
+    ]
+}
