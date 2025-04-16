@@ -23,7 +23,7 @@ class LayoutTemplate extends StatelessWidget {
       child: CenteredView(
         child: Column(
           children: [
-            const CustomNavBar(),
+            const CustomNavBarLayout(),
             Expanded(
               child: Padding(
                 padding: EdgeInsets.symmetric(

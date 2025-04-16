@@ -13,7 +13,7 @@ class AboutViewLayout extends StatelessWidget {
       create: (context) => SectionCubit(SectionDatasource()),
       child: ScreenTypeLayout.builder(
         mobile: (BuildContext context) => const AboutViewMobile(),
-        tablet: (BuildContext context) => const AboutViewDesktop(),
+        tablet: (BuildContext context) => const AboutViewTablet(),
         desktop: (BuildContext context) => const AboutViewDesktop(),
       ),
     );

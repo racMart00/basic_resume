@@ -11,26 +11,35 @@ class NavBarDrawerHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     final topSafeAreaPadding = MediaQuery.of(context).padding.top;
     final isAndroid = !kIsWeb && Platform.isAndroid;
+    final font = Theme.of(context).textTheme;
 
-    //TODO: Improve responsive text here
     return Stack(
       children: [
         Container(
           height: isAndroid ? topSafeAreaPadding + 150 : 150,
           color: Colors.green.shade600,
           alignment: Alignment.center,
-          padding:
-              EdgeInsets.only(top: isAndroid ? topSafeAreaPadding : 1),
+          padding: EdgeInsets.only(top: isAndroid ? topSafeAreaPadding : 1),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
               Text(
                 "Hi! I'm_racMart",
-                style: Theme.of(context).textTheme.displayLarge,
+                style: TextStyle(
+                  fontSize: font.displayLarge!.fontSize,
+                  fontWeight: font.displayLarge!.fontWeight,
+                  fontFamily: font.displayLarge!.fontFamily,
+                  color: Colors.white,
+                ),
               ),
               Text(
                 'Front-End Developer',
-                style: Theme.of(context).textTheme.titleMedium,
+                style: TextStyle(
+                  fontSize: font.titleMedium!.fontSize,
+                  fontWeight: font.titleMedium!.fontWeight,
+                  fontFamily: font.titleMedium!.fontFamily,
+                  color: Colors.white,
+                ),
               ),
             ],
           ),

@@ -2,8 +2,8 @@ import 'package:basic_resume/presentation/presentation.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
-class CustomNavBar extends StatelessWidget {
-  const CustomNavBar({super.key});
+class CustomNavBarLayout extends StatelessWidget {
+  const CustomNavBarLayout({super.key});
 
   @override
   Widget build(BuildContext context) {

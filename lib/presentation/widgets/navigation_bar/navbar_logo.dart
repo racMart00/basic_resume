@@ -27,6 +27,7 @@ class NavBarLogo extends StatelessWidget {
               ),
             ),
           ),
+          SizedBox(width: size.width * 0.01),
           Text("Hi! I'm_racMart",
               style: Theme.of(context).textTheme.displayMedium,),
         ],

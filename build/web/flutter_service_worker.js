@@ -3,9 +3,9 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 
-const RESOURCES = {"assets/AssetManifest.bin": "fcab4a8b3f1071f368f60ea4b3cee60f",
-"assets/AssetManifest.bin.json": "be397f546d433ad6f862e0e3f3e33d00",
-"assets/AssetManifest.json": "2daf238ce3a31a83f6b2b426d75fb436",
+const RESOURCES = {"assets/AssetManifest.bin": "6bafe16450318508891a71c7fa1aecb1",
+"assets/AssetManifest.bin.json": "5b2a276dffe503b8db8cfc66342aca98",
+"assets/AssetManifest.json": "b1bd48b18b5751a0522bd701bd9ad85d",
 "assets/assets/db/projects.json": "d8964ace34af615bdcc833016e156861",
 "assets/assets/db/sections.json": "b91e31431ad41a46d5ad8f0a47898876",
 "assets/assets/icons/dev_icons/bootstrap.svg": "8c2689b779cee6d34f5bd5fc13201fee",
@@ -21,6 +21,7 @@ const RESOURCES = {"assets/AssetManifest.bin": "fcab4a8b3f1071f368f60ea4b3cee60f
 "assets/assets/icons/dev_icons/react.svg": "8ed4fcfa4b9f0b2b85a00eda3d6f1825",
 "assets/assets/icons/dev_icons/roblox.svg": "c5e0a673df1f1a4737bbedd2f7a3d598",
 "assets/assets/icons/dev_icons/tailwind.svg": "0a94ca4cd8a9a945fb1ec48d1428aa8f",
+"assets/assets/icons/download.svg": "a72b0fff9ddb18ffd36ff915ec11a1bc",
 "assets/assets/icons/racmart_logo_512px.png": "bfb4611b066b9ed9c19881771175829e",
 "assets/assets/icons/racmart_logo_hd.jpg": "04a284148a087fe13256d17fec71d965",
 "assets/assets/icons/social_media/github.png": "2dc32ed64c29cc81810431e55f9df5b5",
@@ -45,16 +46,16 @@ const RESOURCES = {"assets/AssetManifest.bin": "fcab4a8b3f1071f368f60ea4b3cee60f
 "canvaskit/skwasm.worker.js": "89990e8c92bcb123999aa81f7e203b1c",
 "favicon.png": "e7035c7522f41ac642718a6b31bc2eac",
 "flutter.js": "f393d3c16b631f36852323de8e583132",
-"flutter_bootstrap.js": "d2334ebf73341b17823610ceeb0ab23d",
+"flutter_bootstrap.js": "b02fddaab2a15df08eab0f08e84bf23d",
 "icons/Icon-192.png": "d82637a762200d45ffda431387cbb8bd",
 "icons/Icon-512.png": "a4b7a7425e749d2202fcd6ee7e530e09",
 "icons/Icon-maskable-192.png": "d82637a762200d45ffda431387cbb8bd",
 "icons/Icon-maskable-512.png": "a4b7a7425e749d2202fcd6ee7e530e09",
 "index.html": "851c21aaa91e68a9a40704027d29a508",
 "/": "851c21aaa91e68a9a40704027d29a508",
-"main.dart.js": "59d9755a16d89e0534a30fe67a67945e",
+"main.dart.js": "cad4dee7789da0a6976ecae30ba290c1",
 "manifest.json": "314b379b2dbb43ff6af7258a5588180c",
-"version.json": "74ff4e5bbb91352110ecda9cd5a6f5a1"};
+"version.json": "2a289277463086b0f18bf6d31bbb60f1"};
 // The application shell files that are downloaded before a service worker can
 // start.
 const CORE = ["main.dart.js",

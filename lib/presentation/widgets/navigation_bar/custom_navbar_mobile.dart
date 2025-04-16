@@ -14,7 +14,7 @@ class CustomNavBarMobile extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           const NavBarLogo(),
-
+          
           IconButton(
             onPressed: () {
               Scaffold.of(context).openDrawer();

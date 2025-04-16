@@ -5,7 +5,7 @@ export 'package:basic_resume/presentation/widgets/fonts_responsive/fonts_respons
 export 'package:basic_resume/presentation/widgets/my_avatar/my_avatar.dart';
 export 'package:basic_resume/presentation/widgets/navbar_drawer/navbar_drawer.dart';
 export 'package:basic_resume/presentation/widgets/navbar_drawer/navbar_drawer_header.dart';
-export 'package:basic_resume/presentation/widgets/navigation_bar/custom_navbar.dart';
+export 'package:basic_resume/presentation/widgets/navigation_bar/custom_navbar_layout.dart';
 export 'package:basic_resume/presentation/widgets/navigation_bar/custom_navbar_mobile.dart';
 export 'package:basic_resume/presentation/widgets/navigation_bar/custom_navbar_tablet_desktop.dart';
 export 'package:basic_resume/presentation/widgets/navigation_bar/navbar_item.dart';

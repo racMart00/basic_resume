@@ -25,7 +25,7 @@ class CourseDetails extends StatelessWidget {
         var boxSize = size.height * 1.25;
 
         if (sizingInformation.deviceScreenType case DeviceScreenType.desktop) {
-          boxSize = size.width * 0.55;
+          boxSize = size.width * 0.5;
         } else if (sizingInformation.deviceScreenType
             case DeviceScreenType.tablet) {
           boxSize = size.width * 0.9;

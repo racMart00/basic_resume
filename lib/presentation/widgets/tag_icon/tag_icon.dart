@@ -25,27 +25,23 @@ class TagIcon extends StatelessWidget {
         double verticalPadding;
         double spacingWidth;
         double iconSize;
-        double borderRadiusValue;
 
         if (sizingInformation.deviceScreenType == DeviceScreenType.desktop) {
-          horizontalPadding = 12.0;
-          verticalPadding = 6.0;
-          spacingWidth = 8.0;
-          iconSize = 20.0;
-          borderRadiusValue = 8.0;
+          horizontalPadding = 10.0;
+          verticalPadding = 2.0;
+          spacingWidth = 6.0;
+          iconSize = 14.0;
         } else if (sizingInformation.deviceScreenType ==
             DeviceScreenType.tablet) {
-          horizontalPadding = 10.0;
-          verticalPadding = 5.0;
-          spacingWidth = 6.0;
-          iconSize = 18.0;
-          borderRadiusValue = 8.0;
+          horizontalPadding = 8.0;
+          verticalPadding = 2.0;
+          spacingWidth = 5.0;
+          iconSize = 14.0;
         } else {
           horizontalPadding = 8.0;
           verticalPadding = 4.0;
           spacingWidth = 4.0;
           iconSize = 16.0;
-          borderRadiusValue = 6.0;
         }
 
         return Container(
@@ -55,7 +51,7 @@ class TagIcon extends StatelessWidget {
           ),
           decoration: BoxDecoration(
             color: tagColor,
-            borderRadius: BorderRadius.circular(borderRadiusValue),
+            borderRadius: BorderRadius.circular(6),
           ),
           child: Row(
             mainAxisSize: MainAxisSize.min,

@@ -11,28 +11,28 @@ TextStyle? getFontTextStyle(
   switch (sectionName) {
     case 'title':
       if (sizingInformation.deviceScreenType case DeviceScreenType.desktop) {
-        textStyle = Theme.of(context).textTheme.titleSmall;
+        textStyle = Theme.of(context).textTheme.displayMedium;
       } else if (sizingInformation.deviceScreenType
           case DeviceScreenType.tablet) {
-        textStyle = Theme.of(context).textTheme.titleMedium;
+        textStyle = Theme.of(context).textTheme.displayMedium;
       } else {
         textStyle = Theme.of(context).textTheme.displayMedium;
       }
     case 'subtitle':
       if (sizingInformation.deviceScreenType case DeviceScreenType.desktop) {
-        textStyle = Theme.of(context).textTheme.bodyLarge;
+        textStyle = Theme.of(context).textTheme.titleMedium;
       } else if (sizingInformation.deviceScreenType
           case DeviceScreenType.tablet) {
-        textStyle = Theme.of(context).textTheme.bodyLarge;
+        textStyle = Theme.of(context).textTheme.titleSmall;
       } else {
         textStyle = Theme.of(context).textTheme.titleSmall;
       }
     case 'where':
       if (sizingInformation.deviceScreenType case DeviceScreenType.desktop) {
-        textStyle = Theme.of(context).textTheme.bodySmall;
+        textStyle = Theme.of(context).textTheme.bodyMedium;
       } else if (sizingInformation.deviceScreenType
           case DeviceScreenType.tablet) {
-        textStyle = Theme.of(context).textTheme.bodySmall;
+        textStyle = Theme.of(context).textTheme.bodyLarge;
       } else {
         textStyle = Theme.of(context).textTheme.bodyLarge;
       }
@@ -41,25 +41,37 @@ TextStyle? getFontTextStyle(
         textStyle = Theme.of(context).textTheme.bodySmall;
       } else if (sizingInformation.deviceScreenType
           case DeviceScreenType.tablet) {
-        textStyle = Theme.of(context).textTheme.bodySmall;
+        textStyle = Theme.of(context).textTheme.bodyMedium;
       } else {
         textStyle = Theme.of(context).textTheme.bodyMedium;
       }
     case 'description':
       if (sizingInformation.deviceScreenType case DeviceScreenType.desktop) {
-        textStyle = Theme.of(context).textTheme.bodySmall;
+        textStyle = Theme.of(context).textTheme.bodyLarge;
       } else if (sizingInformation.deviceScreenType
           case DeviceScreenType.tablet) {
-        textStyle = Theme.of(context).textTheme.bodyMedium;
+        textStyle = Theme.of(context).textTheme.titleSmall;
       } else {
         textStyle = Theme.of(context).textTheme.displaySmall;
       }
     case 'tags':
       if (sizingInformation.deviceScreenType case DeviceScreenType.desktop) {
-        textStyle = Theme.of(context).textTheme.bodySmall;
+        final textTheme = Theme.of(context).textTheme.bodyLarge!;
+        textStyle = TextStyle(
+          color: Colors.white,
+          fontFamily: textTheme.fontFamily,
+          fontStyle: textTheme.fontStyle,
+          fontSize: textTheme.fontSize,
+        );
       } else if (sizingInformation.deviceScreenType
           case DeviceScreenType.tablet) {
-        textStyle = Theme.of(context).textTheme.bodyMedium;
+        final textTheme = Theme.of(context).textTheme.titleSmall!;
+        textStyle = TextStyle(
+          color: Colors.white,
+          fontFamily: textTheme.fontFamily,
+          fontStyle: textTheme.fontStyle,
+          fontSize: textTheme.fontSize,
+        );
       } else {
         final textTheme = Theme.of(context).textTheme.titleMedium!;
         textStyle = TextStyle(

@@ -15,7 +15,6 @@ class CustomNavBarTabletDesktop extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           const NavBarLogo(),
-
           Row(
             mainAxisSize: MainAxisSize.min,
             children: [
@@ -33,11 +32,17 @@ class CustomNavBarTabletDesktop extends StatelessWidget {
                   );
                 },
               ),
-              const NavBarItem(title: 'Home', icon: Icons.home_filled, path: '/'),
+              const NavBarItem(
+                  title: 'Home', icon: Icons.home_filled, path: '/',),
               const NavBarItem(
                 title: 'About',
                 icon: Icons.account_circle,
                 path: '/1',
+              ),
+              const NavBarItem(
+                title: 'My Work',
+                icon: Icons.shopping_bag,
+                path: '/2',
               ),
             ],
           ),

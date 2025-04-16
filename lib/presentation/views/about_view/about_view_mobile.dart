@@ -100,7 +100,7 @@ class _AboutViewMobileState extends State<AboutViewMobile> {
               SizedBox(height: size.height * 0.02),
               SizedBox(
                 width: size.width,
-                height: size.height * 0.25,
+                height: size.height * 0.28,
                 child: Stack(
                   children: [
                     CarouselSlider(
@@ -113,7 +113,7 @@ class _AboutViewMobileState extends State<AboutViewMobile> {
                             const Duration(milliseconds: 500),
                         viewportFraction: 1,
                         disableCenter: true,
-                        height: size.height * 0.25,
+                        height: size.height * 0.28,
                         onPageChanged: (index, reason) {
                           setState(() {
                             currentIndex = index;

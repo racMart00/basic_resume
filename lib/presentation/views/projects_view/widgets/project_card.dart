@@ -24,6 +24,7 @@ class ProjectCard extends StatelessWidget {
     return ResponsiveBuilder(
       builder: (context, sizingInformation) {
         return Card(
+          elevation: 8,
           child: Column(
             children: [
               Container(
