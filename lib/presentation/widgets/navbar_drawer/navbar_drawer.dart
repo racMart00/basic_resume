@@ -1,25 +1,19 @@
+import 'package:basic_resume/config/config.dart';
 import 'package:basic_resume/presentation/presentation.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class NavBarDrawer extends StatelessWidget {
   const NavBarDrawer({super.key});
 
-  Future<void> _handleDownload(Uri url) async {
-    if (!await launchUrl(
-      url,
-    )) {
-      debugPrint('Could not launch $url');
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    final apkDownloadUri = Uri.parse(
-        'https://drive.google.com/uc?export=download&id=1UaghPTuFYdqmb_YE_5PEzKJe7yWTs1ee',);
+    final apkTextTheme = Theme.of(context).textTheme.displayMedium!;
+    final apkColor = Theme.of(context).colorScheme.primaryFixed;
+    const apkDownloadUri =
+        'https://drive.google.com/uc?export=download&id=1UaghPTuFYdqmb_YE_5PEzKJe7yWTs1ee';
 
     return ResponsiveBuilder(
       builder: (context, sizingInformation) {
@@ -58,35 +52,35 @@ class NavBarDrawer extends StatelessWidget {
                       ),
                       SizedBox(height: size.height * 0.02),
                       const Spacer(),
-                      GestureDetector(
-                        onTap: () => _handleDownload(apkDownloadUri),
-                        child: MouseRegion(
-                          cursor: kIsWeb
-                              ? SystemMouseCursors.click
-                              : SystemMouseCursors.basic,
-                          child: TextButton(
-                            onPressed: () {},
-                            style: ButtonStyle(
-                              backgroundColor: WidgetStatePropertyAll<Color>(
-                                Theme.of(context)
-                                    .colorScheme
-                                    .onPrimaryFixedVariant,
-                              ),
+                      MouseRegion(
+                        cursor: kIsWeb
+                            ? SystemMouseCursors.click
+                            : SystemMouseCursors.basic,
+                        child: TextButton(
+                          onPressed: () => launchExternalURL(apkDownloadUri),
+                          style: ButtonStyle(
+                            backgroundColor: WidgetStatePropertyAll<Color>(
+                              Theme.of(context)
+                                  .colorScheme
+                                  .onPrimaryFixedVariant,
                             ),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Text(
-                                  "Hi! I'm_racMart.apk",
-                                  style: getFontTextStyle(
-                                    'title',
-                                    sizingInformation,
-                                    context,
-                                  ),
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                "Hi! I'm_racMart.apk",
+                                style: TextStyle(
+                                  fontSize: apkTextTheme.fontSize,
+                                  color: apkColor,
                                 ),
-                                const Icon(Icons.download, size: 30),
-                              ],
-                            ),
+                              ),
+                              Icon(
+                                Icons.download,
+                                size: 30,
+                                color: apkColor,
+                              ),
+                            ],
                           ),
                         ),
                       ),
