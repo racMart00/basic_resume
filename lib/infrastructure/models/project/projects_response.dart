@@ -5,6 +5,9 @@ class ProjectsResponse {
     required this.img,
     required this.title,
     required this.description,
+    required this.isDownloadable,
+    required this.websiteLink,
+    this.apkDownloadLink,
     this.tags,
   });
 
@@ -26,6 +29,9 @@ class ProjectsResponse {
       img: json['img'].toString(),
       title: json['title'].toString(),
       description: json['description'].toString(),
+      isDownloadable: json['isDownloadable'] as bool,
+      websiteLink: json['websiteLink'].toString(),
+      apkDownloadLink: json['apkDownloadLink'].toString(),
       tags: parsedTags,
     );
   }
@@ -33,6 +39,9 @@ class ProjectsResponse {
   final String img;
   final String title;
   final String description;
+  final bool isDownloadable;
+  final String websiteLink;
+  final String? apkDownloadLink;
   final Map<String, TagResponse>? tags;
 
   Map<String, dynamic> toJson() {
@@ -40,6 +49,9 @@ class ProjectsResponse {
       'img': img,
       'title': title,
       'description': description,
+      'isDownloadable': isDownloadable,
+      'websiteLink': websiteLink,
+      'apkDownloadLink': apkDownloadLink,
       'tags': tags?.map((key, value) => MapEntry(key, value.toJson())),
     };
   }

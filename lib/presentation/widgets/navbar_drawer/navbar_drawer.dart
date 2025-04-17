@@ -18,12 +18,13 @@ class NavBarDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    final apkDownloadUri = Uri.parse('https://drive.google.com/uc?export=download&id=1UaghPTuFYdqmb_YE_5PEzKJe7yWTs1ee');
+    final apkDownloadUri = Uri.parse(
+        'https://drive.google.com/uc?export=download&id=1UaghPTuFYdqmb_YE_5PEzKJe7yWTs1ee');
 
     return ResponsiveBuilder(
       builder: (context, sizingInformation) {
         return Container(
-          width: size.width * 0.5,
+          width: 250,
           color: Theme.of(context).colorScheme.surface,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -63,18 +64,29 @@ class NavBarDrawer extends StatelessWidget {
                           cursor: kIsWeb
                               ? SystemMouseCursors.click
                               : SystemMouseCursors.basic,
-                          child: TagIcon(
-                            tagTitle: Text(
-                              "Hi! I'm_racMart.apk",
-                              style: getFontTextStyle(
-                                'description',
-                                sizingInformation,
-                                context,
+                          child: TextButton(
+                            onPressed: () {},
+                            style: ButtonStyle(
+                              backgroundColor: WidgetStatePropertyAll<Color>(
+                                Theme.of(context)
+                                    .colorScheme
+                                    .onPrimaryFixedVariant,
                               ),
                             ),
-                            tagColor: Colors.deepPurpleAccent.shade200,
-                            svgDir: 'assets/icons/download.svg',
-                            svgTitle: 'Apk Download',
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  "Hi! I'm_racMart.apk",
+                                  style: getFontTextStyle(
+                                    'title',
+                                    sizingInformation,
+                                    context,
+                                  ),
+                                ),
+                                const Icon(Icons.download, size: 30),
+                              ],
+                            ),
                           ),
                         ),
                       ),

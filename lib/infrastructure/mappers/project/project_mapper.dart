@@ -7,6 +7,9 @@ class ProjectMapper {
         img: model.img,
         title: model.title,
         description: model.description,
+        isDownloadable: model.isDownloadable,
+        websiteLink: model.websiteLink,
+        apkDownloadLink: model.apkDownloadLink,
         tags: model.tags?.map(
             (key, value) => MapEntry(key, TagMapper.tagModelToEntity(value)),),
       );

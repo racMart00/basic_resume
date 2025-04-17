@@ -11,7 +11,7 @@ TextStyle? getFontTextStyle(
   switch (sectionName) {
     case 'title':
       if (sizingInformation.deviceScreenType case DeviceScreenType.desktop) {
-        textStyle = Theme.of(context).textTheme.displayMedium;
+        textStyle = Theme.of(context).textTheme.titleMedium;
       } else if (sizingInformation.deviceScreenType
           case DeviceScreenType.tablet) {
         textStyle = Theme.of(context).textTheme.displayMedium;
@@ -20,7 +20,7 @@ TextStyle? getFontTextStyle(
       }
     case 'subtitle':
       if (sizingInformation.deviceScreenType case DeviceScreenType.desktop) {
-        textStyle = Theme.of(context).textTheme.titleMedium;
+        textStyle = Theme.of(context).textTheme.titleSmall;
       } else if (sizingInformation.deviceScreenType
           case DeviceScreenType.tablet) {
         textStyle = Theme.of(context).textTheme.titleSmall;

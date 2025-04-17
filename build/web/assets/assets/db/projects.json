@@ -2,8 +2,10 @@
     "my_work": [
         {
             "img": "assets/images/banner.png",
-            "title": "Proyecto #1",
-            "description": "Development of videogames.",
+            "title": "Prepare to Die",
+            "description": "Just run.",
+            "isDownloadable": false,
+            "websiteLink": "https://www.google.com",
             "tags": {
                 "Roblox Studio": {
                     "icon": "assets/icons/dev_icons/roblox.svg",
@@ -15,6 +17,8 @@
             "img": "assets/images/banner.png",
             "title": "Proyecto #1",
             "description": "Development of videogames.",
+            "isDownloadable": false,
+            "websiteLink": "https://www.google.com",
             "tags": {
                 "Roblox Studio": {
                     "icon": "assets/icons/dev_icons/roblox.svg",
@@ -26,6 +30,8 @@
             "img": "assets/images/banner.png",
             "title": "Proyecto #1",
             "description": "Development of videogames.",
+            "isDownloadable": false,
+            "websiteLink": "https://www.google.com",
             "tags": {
                 "Roblox Studio": {
                     "icon": "assets/icons/dev_icons/roblox.svg",

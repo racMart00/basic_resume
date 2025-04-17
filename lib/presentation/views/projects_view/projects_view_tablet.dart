@@ -23,31 +23,31 @@ class _ProjectsViewTabletState extends State<ProjectsViewTablet> {
     return BlocBuilder<ProjectCubit, ProjectState>(
       builder: (context, state) {
         return state is ProjectLoaded
-            ? GridView.builder(
-                shrinkWrap: true,
-                padding: EdgeInsets.only(
-                  top: size.height * 0.02,
-                  bottom: size.height * 0.03,
-                  left: size.width * 0.05,
-                  right: size.width * 0.05,
-                ),
+            ? SingleChildScrollView(
                 physics: const BouncingScrollPhysics(),
-                itemCount: state.projects.length,
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                  childAspectRatio: size.height * 0.00145,
-                  crossAxisSpacing: size.width * 0.02,
-                  mainAxisSpacing: size.height * 0.015,
+                child: Padding(
+                  padding: EdgeInsets.only(bottom: size.height * 0.02),
+                  child: Wrap(
+                    spacing: size.width * 0.02,
+                    runSpacing: size.width * 0.02,
+                    alignment: WrapAlignment.spaceBetween,
+                    children: state.projects.map((project) {
+                      final cardWidth = size.width * 0.41;
+                      return SizedBox(
+                        width: cardWidth,
+                        child: ProjectCard(
+                          img: project.img,
+                          title: project.title,
+                          description: project.description,
+                          isDownloadable: project.isDownloadable,
+                          websiteLink: project.websiteLink,
+                          apkDownloadLink: project.apkDownloadLink,
+                          tags: project.tags,
+                        ),
+                      );
+                    }).toList(),
+                  ),
                 ),
-                itemBuilder: (context, index) {
-                  final project = state.projects[index];
-                  return ProjectCard(
-                    img: project.img,
-                    title: project.title,
-                    description: project.description,
-                    tags: project.tags,
-                  );
-                },
               )
             : state is ProjectError
                 ? Center(child: Text(state.message))

@@ -37,6 +37,9 @@ class _ProjectsViewMobileState extends State<ProjectsViewMobile> {
                       img: project.img,
                       title: project.title,
                       description: project.description,
+                      isDownloadable: project.isDownloadable,
+                      websiteLink: project.websiteLink,
+                      apkDownloadLink: project.apkDownloadLink,
                       tags: project.tags,
                     ),
                   );
