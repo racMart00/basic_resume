@@ -111,12 +111,16 @@ class ProjectCard extends StatelessWidget {
                 ),
               ),
               SizedBox(height: size.height * 0.01),
-              Text(
-                description,
-                style: getFontTextStyle(
-                  'description',
-                  sizingInformation,
-                  context,
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: size.height * 0.02),
+                child: Text(
+                  description,
+                  textAlign: TextAlign.justify,
+                  style: getFontTextStyle(
+                    'description',
+                    sizingInformation,
+                    context,
+                  ),
                 ),
               ),
               SizedBox(height: size.height * 0.01),

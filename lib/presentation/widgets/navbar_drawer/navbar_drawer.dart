@@ -19,7 +19,7 @@ class NavBarDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     final apkDownloadUri = Uri.parse(
-        'https://drive.google.com/uc?export=download&id=1UaghPTuFYdqmb_YE_5PEzKJe7yWTs1ee');
+        'https://drive.google.com/uc?export=download&id=1UaghPTuFYdqmb_YE_5PEzKJe7yWTs1ee',);
 
     return ResponsiveBuilder(
       builder: (context, sizingInformation) {

@@ -1,37 +1,11 @@
 {
     "my_work": [
         {
-            "img": "assets/images/banner.png",
-            "title": "Prepare to Die",
-            "description": "Just run.",
+            "img": "assets/images/projects_banners/dont_die.png",
+            "title": "[BETA] Don't die!",
+            "description": "In Eternal Night's dark world, players desperately outrun relentless demons through dangerous, dynamic environments. Survival requires quick thinking and agility, strategically using the surroundings to create obstacles and evade pursuers. Prepare for intense chases and a desperate fight against the infernal legions.",
             "isDownloadable": false,
-            "websiteLink": "https://www.google.com",
-            "tags": {
-                "Roblox Studio": {
-                    "icon": "assets/icons/dev_icons/roblox.svg",
-                    "color": "255,244,67,54"
-                }
-            }
-        },
-        {
-            "img": "assets/images/banner.png",
-            "title": "Proyecto #1",
-            "description": "Development of videogames.",
-            "isDownloadable": false,
-            "websiteLink": "https://www.google.com",
-            "tags": {
-                "Roblox Studio": {
-                    "icon": "assets/icons/dev_icons/roblox.svg",
-                    "color": "255,244,67,54"
-                }
-            }
-        },
-        {
-            "img": "assets/images/banner.png",
-            "title": "Proyecto #1",
-            "description": "Development of videogames.",
-            "isDownloadable": false,
-            "websiteLink": "https://www.google.com",
+            "websiteLink": "https://www.roblox.com/es/games/102625007538550/BETA-Dont-die",
             "tags": {
                 "Roblox Studio": {
                     "icon": "assets/icons/dev_icons/roblox.svg",
